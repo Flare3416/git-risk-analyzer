@@ -216,6 +216,8 @@ with st.status(f"Analyzing **{repo_name}**...", expanded=True) as status:
     features_df = build_dataset(data_dir="data", output_path=features_csv, single_repo_csv=commits_csv)
     st.write("Running predictions...")
     results = predict_repo(features_df)
+    st.write("Prediction complete")
+
     status.update(label="Analysis complete", state="complete")
 
 high   = results[results["risk_label"] == "High"]
@@ -235,7 +237,6 @@ c1.metric("Total Files", len(results))
 c2.metric("High Risk",   len(high))
 c3.metric("Medium Risk", len(medium))
 c4.metric("Low Risk",    len(low))
-
 st.divider()
 
 # ── charts ───────────────────────────────────────────
@@ -262,6 +263,7 @@ with col_a:
         showlegend=True,
         legend=dict(font=dict(color="#8B949E", size=12), bgcolor="rgba(0,0,0,0)")
     )
+    
     st.plotly_chart(fig_pie, use_container_width=True)
 
 with col_b:
@@ -297,40 +299,83 @@ st.divider()
 st.markdown('<div class="section-label">All files</div>', unsafe_allow_html=True)
 
 col_f1, col_f2, _ = st.columns([1, 1, 2])
+
 with col_f1:
     risk_filter = st.multiselect(
-        "Risk level", ["High", "Medium", "Low"],
+        "Risk level",
+        ["High", "Medium", "Low"],
         default=["High", "Medium", "Low"],
         label_visibility="collapsed"
     )
+
 with col_f2:
-    search = st.text_input("Search file", placeholder="filter by filename...", label_visibility="collapsed")
+    search = st.text_input(
+        "Search file",
+        placeholder="filter by filename...",
+        label_visibility="collapsed"
+    )
 
 filtered = results[results["risk_label"].isin(risk_filter)]
+
 if search:
-    filtered = filtered[filtered["file_path"].str.contains(search, case=False)]
+    filtered = filtered[
+        filtered["file_path"].str.contains(search, case=False)
+    ]
 
-display = filtered[[
-    "file_path", "risk_score", "risk_label",
-    "total_commits", "unique_authors",
-    "file_age_days", "avg_nloc"
-]].rename(columns={
-    "file_path":      "File",
-    "risk_score":     "Risk Score",
-    "risk_label":     "Level",
-    "total_commits":  "Commits",
-    "unique_authors": "Authors",
-    "file_age_days":  "Age (days)",
-    "avg_nloc":       "Avg LOC",
-})
+filtered = filtered.reset_index(drop=True)
 
-st.dataframe(
-    display,
-    use_container_width=True,
-    hide_index=True,
-    column_config={
-        "Risk Score": st.column_config.ProgressColumn(
-            "Risk Score", min_value=0, max_value=100, format="%.1f%%"
-        ),
-    }
-)
+def risk_color(label):
+    return {"High": "#F85149", "Medium": "#D29922", "Low": "#3FB950"}.get(str(label), "#8B949E")
+
+def risk_bg(label):
+    return {"High": "#3D1A1A", "Medium": "#2D1F00", "Low": "#0D2818"}.get(str(label), "#161B22")
+
+rows = ""
+for _, row in filtered.iterrows():
+    color = risk_color(row["risk_label"])
+    bg    = risk_bg(row["risk_label"])
+    score = row["risk_score"]
+    rows += f"""
+    <tr>
+        <td style='padding:10px 12px;color:#E6EDF3;font-family:JetBrains Mono;font-size:12px;'>{row['file_path']}</td>
+        <td style='padding:10px 12px;min-width:160px;'>
+            <div style='display:flex;align-items:center;gap:8px;'>
+                <div style='flex:1;background:#21262D;border-radius:4px;height:6px;'>
+                    <div style='width:{score}%;background:{color};border-radius:4px;height:6px;'></div>
+                </div>
+                <span style='font-size:12px;color:{color};font-weight:500;min-width:38px;'>{score}%</span>
+            </div>
+        </td>
+        <td style='padding:10px 12px;'>
+            <span style='background:{bg};color:{color};border:1px solid {color};
+                         padding:2px 10px;border-radius:20px;font-size:11px;font-weight:500;'>
+                {row['risk_label']}
+            </span>
+        </td>
+        <td style='padding:10px 12px;color:#8B949E;font-size:13px;text-align:right;'>{int(row['total_commits'])}</td>
+        <td style='padding:10px 12px;color:#8B949E;font-size:13px;text-align:right;'>{int(row['unique_authors'])}</td>
+        <td style='padding:10px 12px;color:#8B949E;font-size:13px;text-align:right;'>{int(row['file_age_days'])}</td>
+        <td style='padding:10px 12px;color:#8B949E;font-size:13px;text-align:right;'>{round(row['avg_nloc'], 1)}</td>
+    </tr>
+    """
+
+st.markdown(f"""
+<div style='border:1px solid #21262D;border-radius:8px;overflow:hidden;'>
+<table style='width:100%;border-collapse:collapse;'>
+    <thead>
+        <tr style='background:#161B22;border-bottom:1px solid #21262D;'>
+            <th style='padding:10px 12px;text-align:left;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>FILE</th>
+            <th style='padding:10px 12px;text-align:left;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>RISK SCORE</th>
+            <th style='padding:10px 12px;text-align:left;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>LEVEL</th>
+            <th style='padding:10px 12px;text-align:right;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>COMMITS</th>
+            <th style='padding:10px 12px;text-align:right;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>AUTHORS</th>
+            <th style='padding:10px 12px;text-align:right;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>AGE (DAYS)</th>
+            <th style='padding:10px 12px;text-align:right;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>AVG LOC</th>
+        </tr>
+    </thead>
+    <tbody>
+        {rows}
+    </tbody>
+</table>
+</div>
+""", unsafe_allow_html=True)
