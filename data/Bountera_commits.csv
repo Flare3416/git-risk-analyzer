@@ -1,0 +1,772 @@
+commit_hash,author,date,msg,file,file_path,lines_added,lines_deleted,complexity,nloc,is_bug_fix
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,.gitignore,.gitignore,41,0,,,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,README.md,README.md,36,0,,,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,favicon.ico,app/favicon.ico,0,0,,,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,globals.css,app/globals.css,26,0,,,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,layout.js,app/layout.js,29,0,1.0,25.0,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,page.js,app/page.js,103,0,1.0,101.0,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,eslint.config.mjs,eslint.config.mjs,14,0,0.0,10.0,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,jsconfig.json,jsconfig.json,7,0,,,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,next.config.mjs,next.config.mjs,4,0,0.0,2.0,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,package-lock.json,package-lock.json,6102,0,,,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,package.json,package.json,23,0,,,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,postcss.config.mjs,postcss.config.mjs,5,0,0.0,4.0,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,file.svg,public/file.svg,1,0,,,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,globe.svg,public/globe.svg,1,0,,,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,next.svg,public/next.svg,1,0,,,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,vercel.svg,public/vercel.svg,1,0,,,0
+cfbea95646cf8fd792483a71c1b395c846da694e,Flare3416,2025-08-14 23:04:08+05:30,Initial commit from Create Next App,window.svg,public/window.svg,1,0,,,0
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",README.md,README.md,57,23,,,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",globals.css,app/globals.css,328,16,,,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",globals_clean.css,app/globals_clean.css,317,0,,,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",page.js,app/page.js,44,96,1.0,41.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",components.json,components.json,17,0,,,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",CTA.js,components/CTA.js,49,0,1.0,43.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",Features.js,components/Features.js,81,0,3.0,71.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",Footer.js,components/Footer.js,67,0,4.0,61.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",Hero.js,components/Hero.js,82,0,3.0,73.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",Navbar.js,components/Navbar.js,80,0,3.0,70.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",SakuraPetals.js,components/SakuraPetals.js,24,0,2.0,21.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",TopCreators.js,components/TopCreators.js,94,0,3.0,81.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",avatar.jsx,components/ui/avatar.jsx,47,0,3.0,41.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",badge.jsx,components/ui/badge.jsx,44,0,2.0,39.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",button.jsx,components/ui/button.jsx,55,0,2.0,50.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",card.jsx,components/ui/card.jsx,101,0,7.0,92.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",utils.js,lib/utils.js,6,0,1.0,5.0,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",package.json,package.json,16,5,,,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",file.svg,,0,1,,,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",globe.svg,,0,1,,,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",window.svg,,0,1,,,1
+7cbb7407752cbadb248c2c5632238871d2f69cf0,Flare3416,2025-08-15 02:02:54+05:30,"Add Bountera landing page with modern UI components
+
+Replaces the default Next.js template with a custom landing page for Bountera, featuring new sections (Hero, Features, Top Creators, CTA, Footer) and animated backgrounds. Adds multiple new React components, enhanced global styles with Tailwind CSS and custom animations, and updates the README with project details and instructions. Removes unused SVG assets and introduces configuration for shadcn/ui components.",tailwind.config.js,tailwind.config.js,101,0,0.0,99.0,1
+2741e1080079ddfcb6bc10c3536a50c8efeccf5a,Flare3416,2025-08-15 02:06:58+05:30,"Add PWA manifest and enhance SEO/metadata
+
+Introduces public/manifest.json for PWA support with app icons and metadata. Updates app/layout.js to use Inter, Poppins, and Playfair Display fonts, and significantly expands SEO, Open Graph, and Twitter metadata. Improves .gitignore organization and coverage for common files.",.gitignore,.gitignore,67,16,,,0
+2741e1080079ddfcb6bc10c3536a50c8efeccf5a,Flare3416,2025-08-15 02:06:58+05:30,"Add PWA manifest and enhance SEO/metadata
+
+Introduces public/manifest.json for PWA support with app icons and metadata. Updates app/layout.js to use Inter, Poppins, and Playfair Display fonts, and significantly expands SEO, Open Graph, and Twitter metadata. Improves .gitignore organization and coverage for common files.",layout.js,app/layout.js,110,9,1.0,107.0,0
+2741e1080079ddfcb6bc10c3536a50c8efeccf5a,Flare3416,2025-08-15 02:06:58+05:30,"Add PWA manifest and enhance SEO/metadata
+
+Introduces public/manifest.json for PWA support with app icons and metadata. Updates app/layout.js to use Inter, Poppins, and Playfair Display fonts, and significantly expands SEO, Open Graph, and Twitter metadata. Improves .gitignore organization and coverage for common files.",manifest.json,public/manifest.json,27,0,,,0
+bdca1ba9e58ee34a2b453d6a97c3cb7906776c57,Flare3416,2025-08-15 02:30:25+05:30,"Improve UI buttons
+
+Refined CTA and Navbar button styles for better UX, replacing the single 'Join Now' button with separate 'Login' and 'Sign Up' buttons. Updated SakuraPetals to generate petal data only on the client side, preventing hydration mismatches. Added metadataBase to layout.js for improved metadata handling.",layout.js,app/layout.js,1,0,1.0,108.0,0
+bdca1ba9e58ee34a2b453d6a97c3cb7906776c57,Flare3416,2025-08-15 02:30:25+05:30,"Improve UI buttons
+
+Refined CTA and Navbar button styles for better UX, replacing the single 'Join Now' button with separate 'Login' and 'Sign Up' buttons. Updated SakuraPetals to generate petal data only on the client side, preventing hydration mismatches. Added metadataBase to layout.js for improved metadata handling.",CTA.js,components/CTA.js,1,1,1.0,43.0,0
+bdca1ba9e58ee34a2b453d6a97c3cb7906776c57,Flare3416,2025-08-15 02:30:25+05:30,"Improve UI buttons
+
+Refined CTA and Navbar button styles for better UX, replacing the single 'Join Now' button with separate 'Login' and 'Sign Up' buttons. Updated SakuraPetals to generate petal data only on the client side, preventing hydration mismatches. Added metadataBase to layout.js for improved metadata handling.",Navbar.js,components/Navbar.js,9,4,3.0,75.0,0
+bdca1ba9e58ee34a2b453d6a97c3cb7906776c57,Flare3416,2025-08-15 02:30:25+05:30,"Improve UI buttons
+
+Refined CTA and Navbar button styles for better UX, replacing the single 'Join Now' button with separate 'Login' and 'Sign Up' buttons. Updated SakuraPetals to generate petal data only on the client side, preventing hydration mismatches. Added metadataBase to layout.js for improved metadata handling.",SakuraPetals.js,components/SakuraPetals.js,28,7,5.0,37.0,0
+3db85cb1a467d2eb467351869679b82a0ee74c61,Flare3416,2025-08-15 02:51:55+05:30,-,globals_clean.css,,0,317,,,0
+3db85cb1a467d2eb467351869679b82a0ee74c61,Flare3416,2025-08-15 02:51:55+05:30,-,page.js,app/login/page.js,11,0,1.0,8.0,0
+3db85cb1a467d2eb467351869679b82a0ee74c61,Flare3416,2025-08-15 02:51:55+05:30,-,Navbar.js,components/Navbar.js,3,5,3.0,72.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",page.js,app/activity/page.js,0,0,,,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",route.js,app/api/auth/[...nextauth]/route.js,63,0,10.0,54.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",page.js,app/auth-redirect/page.js,52,0,9.0,41.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",page.js,app/bounties/page.js,63,0,3.0,57.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",page.js,app/dashboard/page.js,203,0,17.0,187.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",globals.css,app/globals.css,9,0,,,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",layout.js,app/layout.js,5,4,1.0,109.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",page.js,app/leaderboard/page.js,85,0,1.0,75.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",page.js,app/login/page.js,116,4,2.0,83.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",page.js,app/page.js,37,1,6.0,70.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",page.js,app/profile-setup/page.js,898,0,80.0,844.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",page.js,app/profile/page.js,0,0,,,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",page.js,app/view-profile/page.js,313,0,36.0,297.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",DashboardNavbar.js,components/DashboardNavbar.js,210,0,16.0,185.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",Navbar.js,components/Navbar.js,21,12,4.0,80.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",SessionWrapper.js,components/SessionWrapper.js,10,0,1.0,9.0,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",package.json,package.json,1,0,,,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",delete-icon.svg,public/delete-icon.svg,6,0,,,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",edit-icon.svg,public/edit-icon.svg,4,0,,,0
+c36d3abb633698ae3cece78c91087a52b354c95d,Flare3416,2025-09-09 19:28:49+05:30,"feat: Add user profile and dashboard components
+
+- Implemented ViewProfile component for displaying user profiles with background, profile image, and user data.
+- Created DashboardNavbar component for navigation with profile dropdown and session management.
+- Enhanced Navbar component to show sign-in status and provide sign-out functionality.
+- Added SessionWrapper component to manage session state with NextAuth.
+- Introduced userData utility functions for managing user data in localStorage.
+- Added SVG icons for delete and edit actions.
+- Updated package.json to include next-auth dependency.",userData.js,utils/userData.js,136,0,54.0,104.0,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",page.js,app/auth-redirect/page.js,47,10,19.0,73.0,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",page.js,app/bounty-dashboard/page.js,240,0,17.0,220.0,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",page.js,app/bounty-poster-setup/page.js,514,0,81.0,430.0,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",page.js,app/create-bounty/page.js,97,0,4.0,89.0,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",page.js,app/dashboard/page.js,121,75,25.0,229.0,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",globals.css,app/globals.css,85,1,,,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",page.js,app/profile-setup/page.js,174,15,122.0,970.0,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",page.js,app/view-profile/page.js,79,43,35.0,329.0,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",DashboardNavbar.js,components/DashboardNavbar.js,152,66,17.0,266.0,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",PurplePetals.js,components/PurplePetals.js,45,0,5.0,37.0,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",RoleSelectionModal.js,components/RoleSelectionModal.js,96,0,3.0,92.0,0
+218d483a2bba013c1de7e859eb088b43baf4422e,Flare3416,2025-09-09 19:29:17+05:30,"Add bounty poster role and dashboard flow
+
+Introduces bounty poster role selection and redirects, including new pages for bounty dashboard, bounty poster profile setup, and bounty creation. Updates dashboard and authentication logic to support role-based navigation. Adds purple-themed UI components and animations for bounty poster experience.",userData.js,utils/userData.js,33,2,66.0,128.0,0
+245dfb971053423604739091ee8a291dd637329d,Flare3416,2025-09-09 21:09:38+05:30,"Add username-based public profile and default images
+
+Introduces a public profile page accessible via /profile/[username], with username validation and uniqueness checks in profile setup. Replaces gradient placeholders with default banner and profile images across dashboard and profile views. Updates DashboardNavbar dropdown positioning and adds new default image assets.",page.js,app/bounty-dashboard/page.js,13,12,17.0,221.0,1
+245dfb971053423604739091ee8a291dd637329d,Flare3416,2025-09-09 21:09:38+05:30,"Add username-based public profile and default images
+
+Introduces a public profile page accessible via /profile/[username], with username validation and uniqueness checks in profile setup. Replaces gradient placeholders with default banner and profile images across dashboard and profile views. Updates DashboardNavbar dropdown positioning and adds new default image assets.",page.js,app/dashboard/page.js,15,13,25.0,230.0,1
+245dfb971053423604739091ee8a291dd637329d,Flare3416,2025-09-09 21:09:38+05:30,"Add username-based public profile and default images
+
+Introduces a public profile page accessible via /profile/[username], with username validation and uniqueness checks in profile setup. Replaces gradient placeholders with default banner and profile images across dashboard and profile views. Updates DashboardNavbar dropdown positioning and adds new default image assets.",page.js,app/profile-setup/page.js,93,0,137.0,1049.0,1
+245dfb971053423604739091ee8a291dd637329d,Flare3416,2025-09-09 21:09:38+05:30,"Add username-based public profile and default images
+
+Introduces a public profile page accessible via /profile/[username], with username validation and uniqueness checks in profile setup. Replaces gradient placeholders with default banner and profile images across dashboard and profile views. Updates DashboardNavbar dropdown positioning and adds new default image assets.",page.js,app/profile/[username]/page.js,338,0,26.0,322.0,1
+245dfb971053423604739091ee8a291dd637329d,Flare3416,2025-09-09 21:09:38+05:30,"Add username-based public profile and default images
+
+Introduces a public profile page accessible via /profile/[username], with username validation and uniqueness checks in profile setup. Replaces gradient placeholders with default banner and profile images across dashboard and profile views. Updates DashboardNavbar dropdown positioning and adds new default image assets.",page.js,app/view-profile/page.js,15,13,35.0,330.0,1
+245dfb971053423604739091ee8a291dd637329d,Flare3416,2025-09-09 21:09:38+05:30,"Add username-based public profile and default images
+
+Introduces a public profile page accessible via /profile/[username], with username validation and uniqueness checks in profile setup. Replaces gradient placeholders with default banner and profile images across dashboard and profile views. Updates DashboardNavbar dropdown positioning and adds new default image assets.",DashboardNavbar.js,components/DashboardNavbar.js,1,1,17.0,266.0,1
+245dfb971053423604739091ee8a291dd637329d,Flare3416,2025-09-09 21:09:38+05:30,"Add username-based public profile and default images
+
+Introduces a public profile page accessible via /profile/[username], with username validation and uniqueness checks in profile setup. Replaces gradient placeholders with default banner and profile images across dashboard and profile views. Updates DashboardNavbar dropdown positioning and adds new default image assets.",deafultbanner.jpeg,public/deafultbanner.jpeg,0,0,,,1
+245dfb971053423604739091ee8a291dd637329d,Flare3416,2025-09-09 21:09:38+05:30,"Add username-based public profile and default images
+
+Introduces a public profile page accessible via /profile/[username], with username validation and uniqueness checks in profile setup. Replaces gradient placeholders with default banner and profile images across dashboard and profile views. Updates DashboardNavbar dropdown positioning and adds new default image assets.",defaultpfp.jpg,public/defaultpfp.jpg,0,0,,,1
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",page.js,app/bounties/page.js,191,24,19.0,200.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",page.js,app/bounty-dashboard/page.js,125,25,29.0,311.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",page.js,app/bounty-poster-setup/page.js,90,11,97.0,504.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",page.js,app/create-bounty/page.js,285,67,29.0,280.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",page.js,app/dashboard/page.js,23,7,27.0,246.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",page.js,app/leaderboard/page.js,285,53,49.0,282.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",page.js,app/profile-setup/page.js,49,48,137.0,1050.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",page.js,app/profile/[username]/page.js,174,101,17.0,397.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",page.js,app/profile/page.js,0,0,,,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",page.js,,0,351,,,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",BountyCard.js,components/BountyCard.js,153,0,14.0,141.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",DashboardNavbar.js,components/DashboardNavbar.js,23,6,20.0,281.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",Footer.js,components/Footer.js,1,0,4.0,62.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",Navbar.js,components/Navbar.js,6,5,4.0,81.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",defaultbanner.jpeg,public/defaultbanner.jpeg,0,0,,,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",activityData.js,utils/activityData.js,128,0,17.0,105.0,0
+5005dbe46beb69c5bd62230643d929ef3aab622f,Flare3416,2025-09-12 00:02:09+05:30,"Implement bounty and creator dashboard features
+
+Added bounty listing, filtering, and creation functionality, including category and difficulty filters, and sample bounty creation. Enhanced bounty poster dashboard with stats, recent activity, and bounty management. Improved leaderboard with search, pagination, and profile linking. Updated profile setup to support image editing and deletion. Refactored dashboard and related pages to use Next.js Image component for optimized image handling.",bountyData.js,utils/bountyData.js,188,0,44.0,140.0,0
+afdb9d97b4196492e48df1eb02b2027aaea5a6d6,Flare3416,2025-09-12 03:23:29+05:30,"Add my-bounties page and enhance bounty management
+
+Introduces a new 'my-bounties' page for bounty posters to manage their created bounties, including filtering, editing, and deleting. Refactors bounty-related pages to support real-time expiration, role-based theming, and improved filtering by status. Adds contact information to bounty creation and editing, and updates UI components for better user experience and consistency across poster and hunter roles.",page.js,app/bounties/page.js,139,35,35.0,289.0,0
+afdb9d97b4196492e48df1eb02b2027aaea5a6d6,Flare3416,2025-09-12 03:23:29+05:30,"Add my-bounties page and enhance bounty management
+
+Introduces a new 'my-bounties' page for bounty posters to manage their created bounties, including filtering, editing, and deleting. Refactors bounty-related pages to support real-time expiration, role-based theming, and improved filtering by status. Adds contact information to bounty creation and editing, and updates UI components for better user experience and consistency across poster and hunter roles.",page.js,app/bounty-dashboard/page.js,117,53,51.0,343.0,0
+afdb9d97b4196492e48df1eb02b2027aaea5a6d6,Flare3416,2025-09-12 03:23:29+05:30,"Add my-bounties page and enhance bounty management
+
+Introduces a new 'my-bounties' page for bounty posters to manage their created bounties, including filtering, editing, and deleting. Refactors bounty-related pages to support real-time expiration, role-based theming, and improved filtering by status. Adds contact information to bounty creation and editing, and updates UI components for better user experience and consistency across poster and hunter roles.",page.js,app/create-bounty/page.js,120,38,51.0,353.0,0
+afdb9d97b4196492e48df1eb02b2027aaea5a6d6,Flare3416,2025-09-12 03:23:29+05:30,"Add my-bounties page and enhance bounty management
+
+Introduces a new 'my-bounties' page for bounty posters to manage their created bounties, including filtering, editing, and deleting. Refactors bounty-related pages to support real-time expiration, role-based theming, and improved filtering by status. Adds contact information to bounty creation and editing, and updates UI components for better user experience and consistency across poster and hunter roles.",page.js,app/leaderboard/page.js,60,19,52.0,323.0,0
+afdb9d97b4196492e48df1eb02b2027aaea5a6d6,Flare3416,2025-09-12 03:23:29+05:30,"Add my-bounties page and enhance bounty management
+
+Introduces a new 'my-bounties' page for bounty posters to manage their created bounties, including filtering, editing, and deleting. Refactors bounty-related pages to support real-time expiration, role-based theming, and improved filtering by status. Adds contact information to bounty creation and editing, and updates UI components for better user experience and consistency across poster and hunter roles.",page.js,app/my-bounties/page.js,566,0,102.0,462.0,0
+afdb9d97b4196492e48df1eb02b2027aaea5a6d6,Flare3416,2025-09-12 03:23:29+05:30,"Add my-bounties page and enhance bounty management
+
+Introduces a new 'my-bounties' page for bounty posters to manage their created bounties, including filtering, editing, and deleting. Refactors bounty-related pages to support real-time expiration, role-based theming, and improved filtering by status. Adds contact information to bounty creation and editing, and updates UI components for better user experience and consistency across poster and hunter roles.",BountyCard.js,components/BountyCard.js,208,76,22.0,253.0,0
+afdb9d97b4196492e48df1eb02b2027aaea5a6d6,Flare3416,2025-09-12 03:23:29+05:30,"Add my-bounties page and enhance bounty management
+
+Introduces a new 'my-bounties' page for bounty posters to manage their created bounties, including filtering, editing, and deleting. Refactors bounty-related pages to support real-time expiration, role-based theming, and improved filtering by status. Adds contact information to bounty creation and editing, and updates UI components for better user experience and consistency across poster and hunter roles.",DashboardNavbar.js,components/DashboardNavbar.js,9,1,20.0,288.0,0
+afdb9d97b4196492e48df1eb02b2027aaea5a6d6,Flare3416,2025-09-12 03:23:29+05:30,"Add my-bounties page and enhance bounty management
+
+Introduces a new 'my-bounties' page for bounty posters to manage their created bounties, including filtering, editing, and deleting. Refactors bounty-related pages to support real-time expiration, role-based theming, and improved filtering by status. Adds contact information to bounty creation and editing, and updates UI components for better user experience and consistency across poster and hunter roles.",bountyData.js,utils/bountyData.js,142,11,85.0,236.0,0
+afdb9d97b4196492e48df1eb02b2027aaea5a6d6,Flare3416,2025-09-12 03:23:29+05:30,"Add my-bounties page and enhance bounty management
+
+Introduces a new 'my-bounties' page for bounty posters to manage their created bounties, including filtering, editing, and deleting. Refactors bounty-related pages to support real-time expiration, role-based theming, and improved filtering by status. Adds contact information to bounty creation and editing, and updates UI components for better user experience and consistency across poster and hunter roles.",userData.js,utils/userData.js,15,0,73.0,138.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",page.js,app/applicants/page.js,427,0,68.0,382.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",page.js,app/bounties/page.js,76,83,36.0,272.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",page.js,app/bounty-dashboard/page.js,7,2,52.0,348.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",page.js,app/create-bounty/page.js,227,4,83.0,542.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",page.js,app/leaderboard/page.js,17,15,53.0,325.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",page.js,app/my-applications/page.js,298,0,37.0,267.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",page.js,app/my-bounties/page.js,186,71,109.0,550.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",page.js,app/profile/[username]/page.js,5,10,15.0,393.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",BountyCard.js,components/BountyCard.js,114,18,38.0,337.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",BountyModal.js,components/BountyModal.js,369,0,36.0,336.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",CTA.js,components/CTA.js,2,1,1.0,44.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",DashboardNavbar.js,components/DashboardNavbar.js,16,0,20.0,302.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",Hero.js,components/Hero.js,17,3,5.0,85.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",Navbar.js,components/Navbar.js,1,1,4.0,81.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",applicationData.js,utils/applicationData.js,517,0,113.0,402.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",bountyData.js,utils/bountyData.js,59,31,91.0,254.0,0
+05d72610d91af1be9bc32e064a8a8d3abfcc4c04,Flare3416,2025-09-16 13:15:24+05:30,"Add applicants and my-applications pages, enhance bounty features
+
+Introduces new pages for managing bounty applications for both posters and creators. Adds BountyModal component for detailed bounty views, enables reference image uploads with compression in bounty creation, and improves storage management and usage indicators. Updates filtering, modal handling, and UI consistency across bounties, dashboard, and leaderboard pages.",storageManager.js,utils/storageManager.js,100,0,21.0,83.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",page.js,app/auth-redirect/page.js,1,1,19.0,73.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",page.js,app/bounty-dashboard/page.js,8,3,55.0,353.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",page.js,app/dashboard/page.js,68,12,35.0,287.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",page.js,app/leaderboard/page.js,8,71,36.0,269.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",page.js,app/login/page.js,1,1,2.0,83.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",page.js,app/my-bounties/page.js,16,0,113.0,561.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",page.js,app/page.js,2,2,6.0,70.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",page.js,app/profile-setup/page.js,3,3,137.0,1050.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",page.js,app/profile/[username]/page.js,65,16,18.0,440.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",BountyModal.js,components/BountyModal.js,8,0,37.0,341.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",activityData.js,utils/activityData.js,4,1,17.0,108.0,0
+b85ddb9532259fd14af830a8af59e7882b6a7a29,Flare3416,2025-09-16 13:54:40+05:30,"Add creator leaderboard points system
+
+Implements a points and ranking system for creators, including daily login, bounty application, and completion points. Updates dashboard, leaderboard, profile, bounty modal, and my-bounties pages to display and award points. Refactors leaderboard data logic and adds retroactive migration for existing data. Also updates background gradients from 'cream-50' to 'white' for visual consistency.",pointsSystem.js,utils/pointsSystem.js,348,0,78.0,263.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",.env.local.example,.env.local.example,12,0,,,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",DEPLOYMENT.md,DEPLOYMENT.md,186,0,,,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",README.md,README.md,253,45,,,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/applicants/page.js,3,3,68.0,382.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/bounties/page.js,4,3,37.0,273.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/bounty-dashboard/page.js,15,374,9.0,47.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/bounty-poster-setup/page.js,8,8,97.0,504.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/create-bounty/page.js,3,3,83.0,542.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/dashboard/page.js,27,278,9.0,62.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",layout.js,app/layout.js,5,5,1.0,109.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/leaderboard/page.js,8,3,38.0,274.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/my-applications/page.js,3,3,37.0,267.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/my-bounties/page.js,2,2,113.0,561.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/my-donations/page.js,199,0,10.0,185.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/profile-setup/page.js,7,6,137.0,1050.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",page.js,app/profile/[username]/page.js,198,3,26.0,618.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",BountyCard.js,components/BountyCard.js,4,3,38.0,338.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",BountyHunterDashboard.js,components/BountyHunterDashboard.js,365,0,36.0,327.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",BountyHunterNavbar.js,components/BountyHunterNavbar.js,221,0,17.0,200.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",BountyPosterDashboard.js,components/BountyPosterDashboard.js,368,0,37.0,333.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",BountyPosterNavbar.js,components/BountyPosterNavbar.js,211,0,17.0,191.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",DashboardNavbar.js,,0,337,,,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",next.config.mjs,next.config.mjs,44,1,1.0,40.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",applicationData.js,utils/applicationData.js,10,9,112.0,401.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",donationData.js,utils/donationData.js,83,0,16.0,50.0,0
+0dfade228170ee529de5e34f19ce6e564a7789f7,Flare3416,2025-11-12 21:47:11+05:30,"Refactor dashboards and navbars for role separation
+
+Introduces separate dashboard and navbar components for bounty hunters and bounty posters, replacing the generic DashboardNavbar with BountyHunterNavbar and BountyPosterNavbar. Updates dashboard pages to use role-specific dashboards and navigation, and cleans up related imports and logic. Adds new utility and component files to support these changes.",vercel.json,vercel.json,13,0,,,0
+5a4900b6b65057aafa161dbf705414129f89d7b4,Flare3416,2025-11-12 21:53:25+05:30,Delete .env.local.example,.env.local.example,,0,12,,,0
+f7ff2658f1dab4e6cde9ea78a86d16fdb784af10,Flare3416,2025-11-12 21:59:51+05:30,Fix vercel.json - remove env secret references,vercel.json,vercel.json,1,8,,,1
+d15cad33b6ea64eb4f5f79878683539305fe5bfa,Flare3416,2025-11-12 22:02:31+05:30,Fix: Ignore ESLint warnings during Vercel build,eslint.config.mjs,eslint.config.mjs,8,1,0.0,17.0,1
+d15cad33b6ea64eb4f5f79878683539305fe5bfa,Flare3416,2025-11-12 22:02:31+05:30,Fix: Ignore ESLint warnings during Vercel build,next.config.mjs,next.config.mjs,5,0,1.0,43.0,1
+c505fe33e1220f75f125fb844fc4659afa40d6b3,Flare3416,2025-11-12 22:04:42+05:30,Fix: Wrap useSearchParams in Suspense boundary for deployment,page.js,app/create-bounty/page.js,17,2,84.0,556.0,1
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",.gitignore,.gitignore,92,92,,,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",DEPLOYMENT.md,DEPLOYMENT.md,186,186,,,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",README.md,README.md,278,277,,,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",route.js,app/api/auth/[...nextauth]/route.js,63,63,10.0,54.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/applicants/page.js,426,426,68.0,382.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/auth-redirect/page.js,89,89,19.0,73.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/bounties/page.js,328,328,37.0,273.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/bounty-dashboard/page.js,56,56,9.0,47.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/bounty-poster-setup/page.js,593,593,97.0,504.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/create-bounty/page.js,635,635,84.0,556.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/dashboard/page.js,72,72,9.0,62.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",globals.css,app/globals.css,431,431,,,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",layout.js,app/layout.js,132,132,1.0,109.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/leaderboard/page.js,302,302,38.0,274.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/login/page.js,123,123,2.0,83.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/my-applications/page.js,297,297,37.0,267.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/my-bounties/page.js,696,696,113.0,561.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/my-donations/page.js,199,199,10.0,185.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/profile-setup/page.js,1152,1152,137.0,1050.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",page.js,app/profile/[username]/page.js,650,650,26.0,618.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",components.json,components.json,17,17,,,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",BountyCard.js,components/BountyCard.js,382,382,38.0,338.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",BountyHunterDashboard.js,components/BountyHunterDashboard.js,364,364,36.0,327.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",BountyHunterNavbar.js,components/BountyHunterNavbar.js,221,221,17.0,200.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",BountyModal.js,components/BountyModal.js,376,376,37.0,341.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",BountyPosterDashboard.js,components/BountyPosterDashboard.js,367,367,37.0,333.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",BountyPosterNavbar.js,components/BountyPosterNavbar.js,211,211,17.0,191.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",CTA.js,components/CTA.js,50,50,1.0,44.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",Features.js,components/Features.js,81,81,3.0,71.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",Footer.js,components/Footer.js,68,68,4.0,62.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",Hero.js,components/Hero.js,96,96,5.0,85.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",Navbar.js,components/Navbar.js,92,92,4.0,81.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",PurplePetals.js,components/PurplePetals.js,45,45,5.0,37.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",RoleSelectionModal.js,components/RoleSelectionModal.js,96,96,3.0,92.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",SakuraPetals.js,components/SakuraPetals.js,45,45,5.0,37.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",SessionWrapper.js,components/SessionWrapper.js,10,10,1.0,9.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",TopCreators.js,components/TopCreators.js,94,94,3.0,81.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",avatar.jsx,components/ui/avatar.jsx,47,47,3.0,41.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",badge.jsx,components/ui/badge.jsx,44,44,2.0,39.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",button.jsx,components/ui/button.jsx,55,55,2.0,50.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",card.jsx,components/ui/card.jsx,101,101,7.0,92.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",utils.js,lib/utils.js,6,6,1.0,5.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",next.config.mjs,next.config.mjs,52,52,1.0,43.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",package-lock.json,package-lock.json,6102,6102,,,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",package.json,package.json,35,35,,,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",pnpm-workspace.yaml,pnpm-workspace.yaml,3,0,,,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",delete-icon.svg,public/delete-icon.svg,6,6,,,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",edit-icon.svg,public/edit-icon.svg,4,4,,,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",manifest.json,public/manifest.json,27,27,,,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",tailwind.config.js,tailwind.config.js,101,101,0.0,99.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",activityData.js,utils/activityData.js,130,130,17.0,108.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",applicationData.js,utils/applicationData.js,518,518,112.0,401.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",bountyData.js,utils/bountyData.js,347,347,91.0,254.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",donationData.js,utils/donationData.js,83,83,16.0,50.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",pointsSystem.js,utils/pointsSystem.js,347,347,78.0,263.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",storageManager.js,utils/storageManager.js,99,99,21.0,83.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",userData.js,utils/userData.js,182,182,73.0,138.0,0
+17640b7da8e474099e8a157ce3d763ec750eb412,Ujjwal Kumar,2026-05-15 18:03:11+05:30,"Format codebase & normalize line endings
+
+Apply project-wide formatting and whitespace normalization across JS/JSX/CSS/MD files (quote style, line endings, and minor formatting). Update README and DEPLOYMENT docs formatting, add pnpm-workspace.yaml, and update package.json/package-lock.json. These are non-functional style changes to keep the codebase consistent.",vercel.json,vercel.json,6,6,,,0
+ae759da75a545ec86850c9cc4beaeb937e534e9e,Ujjwal Kumar,2026-05-15 18:12:57+05:30,Update package.json,package.json,package.json,35,35,,,0
+224095dfe5bb050c5744501768df725476134837,Ujjwal Kumar,2026-05-15 18:23:20+05:30,Update page.js,page.js,app/activity/page.js,4,0,1.0,3.0,0
