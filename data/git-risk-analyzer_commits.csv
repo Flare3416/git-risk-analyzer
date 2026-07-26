@@ -1,0 +1,258 @@
+commit_hash,author,date,msg,file,file_path,lines_added,lines_deleted,complexity,nloc,is_bug_fix
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,.DS_Store,.DS_Store,0,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,.gitattributes,.gitattributes,2,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,.gitignore,.gitignore,36,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,settings.json,.vscode/settings.json,4,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,README.md,README.md,0,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,app.py,dashboard/app.py,336,0,2.0,286.0,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,Bountera_commits.csv,data/Bountera_commits.csv,772,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,Bountera_features.csv,data/Bountera_features.csv,78,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,cli_commits.csv,data/cli_commits.csv,21771,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,click_commits.csv,data/click_commits.csv,13221,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,django_commits.csv,data/django_commits.csv,497941,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,features.csv,data/features.csv,24616,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,flask_commits.csv,data/flask_commits.csv,22570,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,predictions.csv,data/predictions.csv,9947,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,pytest_commits.csv,data/pytest_commits.csv,171932,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,requests_commits.csv,data/requests_commits.csv,15294,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,rich_commits.csv,data/rich_commits.csv,13436,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,scikit-learn_commits.csv,data/scikit-learn_commits.csv,309313,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,clone_repo.cpython-311.pyc,extractor/__pycache__/clone_repo.cpython-311.pyc,0,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,commit_miner.cpython-311.pyc,extractor/__pycache__/commit_miner.cpython-311.pyc,0,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,labeler.cpython-311.pyc,extractor/__pycache__/labeler.cpython-311.pyc,0,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,clone_repo.py,extractor/clone_repo.py,19,0,2.0,13.0,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,commit_miner.py,extractor/commit_miner.py,39,0,3.0,30.0,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,labeler.py,extractor/labeler.py,36,0,3.0,25.0,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,run_all.py,extractor/run_all.py,34,0,0.0,26.0,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,.DS_Store,features/.DS_Store,0,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,build_dataset.cpython-311.pyc,features/__pycache__/build_dataset.cpython-311.pyc,0,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,build_dataset.py,features/build_dataset.py,62,0,7.0,52.0,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,main.py,main.py,0,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,evaluate.py,model/evaluate.py,82,0,1.0,66.0,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,predict.py,model/predict.py,45,0,2.0,31.0,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,roc_curve.png,model/roc_curve.png,0,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,saved_model.pkl,model/saved_model.pkl,0,0,,,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,train.py,model/train.py,128,0,2.0,103.0,0
+6b3fd4ef7353661aaceba1152cf7c67bc205096d,Ujjwal Kumar,2026-07-26 21:04:10+05:30,Remove repository history,requirements.txt,requirements.txt,9,0,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",.DS_Store,.DS_Store,0,0,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",.gitattributes,,0,2,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",.gitignore,,0,36,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",settings.json,,0,4,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",README.md,README.md,0,0,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",app.py,,0,336,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",Bountera_commits.csv,,0,772,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",Bountera_features.csv,,0,78,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",cli_commits.csv,,0,21734,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",click_commits.csv,,0,13139,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",django_commits.csv,,0,497926,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",features.csv,,0,24616,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",flask_commits.csv,,0,22469,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",predictions.csv,,0,9947,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",pytest_commits.csv,,0,160612,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",requests_commits.csv,,0,15190,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",rich_commits.csv,,0,13292,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",scikit-learn_commits.csv,,0,308960,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",clone_repo.cpython-311.pyc,extractor/__pycache__/clone_repo.cpython-311.pyc,0,0,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",commit_miner.cpython-311.pyc,extractor/__pycache__/commit_miner.cpython-311.pyc,0,0,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",labeler.cpython-311.pyc,extractor/__pycache__/labeler.cpython-311.pyc,0,0,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",clone_repo.py,,0,19,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",commit_miner.py,,0,39,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",labeler.py,,0,36,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",run_all.py,,0,34,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",.DS_Store,features/.DS_Store,0,0,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",build_dataset.cpython-311.pyc,features/__pycache__/build_dataset.cpython-311.pyc,0,0,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",build_dataset.py,,0,62,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",main.py,main.py,0,0,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",evaluate.py,,0,82,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",predict.py,,0,45,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",roc_curve.png,model/roc_curve.png,0,0,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",saved_model.pkl,model/saved_model.pkl,0,0,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",train.py,,0,128,,,0
+92572270c2b1db19fc11199cdf713796a964f861,Ujjwal Kumar,2026-07-26 21:06:19+05:30,"Revert ""Remove repository history""
+
+This reverts commit 6b3fd4ef7353661aaceba1152cf7c67bc205096d.",requirements.txt,,0,9,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",.DS_Store,.DS_Store,0,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",.gitattributes,.gitattributes,2,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",.gitignore,.gitignore,36,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",settings.json,.vscode/settings.json,4,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",README.md,README.md,0,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",app.py,dashboard/app.py,336,0,2.0,286.0,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",Bountera_commits.csv,data/Bountera_commits.csv,772,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",Bountera_features.csv,data/Bountera_features.csv,78,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",cli_commits.csv,data/cli_commits.csv,21771,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",click_commits.csv,data/click_commits.csv,13221,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",django_commits.csv,data/django_commits.csv,497941,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",features.csv,data/features.csv,24616,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",flask_commits.csv,data/flask_commits.csv,22570,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",predictions.csv,data/predictions.csv,9947,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",pytest_commits.csv,data/pytest_commits.csv,171932,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",requests_commits.csv,data/requests_commits.csv,15294,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",rich_commits.csv,data/rich_commits.csv,13436,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",scikit-learn_commits.csv,data/scikit-learn_commits.csv,309313,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",clone_repo.cpython-311.pyc,extractor/__pycache__/clone_repo.cpython-311.pyc,0,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",commit_miner.cpython-311.pyc,extractor/__pycache__/commit_miner.cpython-311.pyc,0,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",labeler.cpython-311.pyc,extractor/__pycache__/labeler.cpython-311.pyc,0,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",clone_repo.py,extractor/clone_repo.py,19,0,2.0,13.0,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",commit_miner.py,extractor/commit_miner.py,39,0,3.0,30.0,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",labeler.py,extractor/labeler.py,36,0,3.0,25.0,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",run_all.py,extractor/run_all.py,34,0,0.0,26.0,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",.DS_Store,features/.DS_Store,0,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",build_dataset.cpython-311.pyc,features/__pycache__/build_dataset.cpython-311.pyc,0,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",build_dataset.py,features/build_dataset.py,62,0,7.0,52.0,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",main.py,main.py,0,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",evaluate.py,model/evaluate.py,82,0,1.0,66.0,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",predict.py,model/predict.py,45,0,2.0,31.0,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",roc_curve.png,model/roc_curve.png,0,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",saved_model.pkl,model/saved_model.pkl,0,0,,,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",train.py,model/train.py,128,0,2.0,103.0,0
+cd9081d88b6d14b40e3f9099061f1b4a919f6977,Ujjwal Kumar,2026-07-26 21:07:25+05:30,"Reapply ""Remove repository history""
+
+This reverts commit 92572270c2b1db19fc11199cdf713796a964f861.",requirements.txt,requirements.txt,9,0,,,0
+fa090b4b6324024de4ae531152289612b429fb2c,Ujjwal Kumar,2026-07-26 21:10:34+05:30,-,.DS_Store,.DS_Store,0,0,,,0
+fa090b4b6324024de4ae531152289612b429fb2c,Ujjwal Kumar,2026-07-26 21:10:34+05:30,-,.gitignore,.gitignore,8,1,,,0
+fa090b4b6324024de4ae531152289612b429fb2c,Ujjwal Kumar,2026-07-26 21:10:34+05:30,-,settings.json,,0,4,,,0
+fa090b4b6324024de4ae531152289612b429fb2c,Ujjwal Kumar,2026-07-26 21:10:34+05:30,-,clone_repo.cpython-311.pyc,extractor/__pycache__/clone_repo.cpython-311.pyc,0,0,,,0
+fa090b4b6324024de4ae531152289612b429fb2c,Ujjwal Kumar,2026-07-26 21:10:34+05:30,-,commit_miner.cpython-311.pyc,extractor/__pycache__/commit_miner.cpython-311.pyc,0,0,,,0
+fa090b4b6324024de4ae531152289612b429fb2c,Ujjwal Kumar,2026-07-26 21:10:34+05:30,-,labeler.cpython-311.pyc,extractor/__pycache__/labeler.cpython-311.pyc,0,0,,,0
+fa090b4b6324024de4ae531152289612b429fb2c,Ujjwal Kumar,2026-07-26 21:10:34+05:30,-,build_dataset.cpython-311.pyc,features/__pycache__/build_dataset.cpython-311.pyc,0,0,,,0
+bd476bb444cbf19504cdf717985f9dc885b9532c,Ujjwal Kumar,2026-07-27 00:46:52+05:30,final mvp commit,app.py,dashboard/app.py,74,29,4.0,281.0,0
+bd476bb444cbf19504cdf717985f9dc885b9532c,Ujjwal Kumar,2026-07-27 00:46:52+05:30,final mvp commit,Bountera_features.csv,data/Bountera_features.csv,23,23,,,0
+bd476bb444cbf19504cdf717985f9dc885b9532c,Ujjwal Kumar,2026-07-27 00:46:52+05:30,final mvp commit,flask_commits.csv,data/flask_commits.csv,9259,9259,,,0
+bd476bb444cbf19504cdf717985f9dc885b9532c,Ujjwal Kumar,2026-07-27 00:46:52+05:30,final mvp commit,saved_model.pkl,model/saved_model.pkl,0,0,,,0
+bd476bb444cbf19504cdf717985f9dc885b9532c,Ujjwal Kumar,2026-07-27 00:46:52+05:30,final mvp commit,requirements.txt,requirements.txt,2,1,,,0

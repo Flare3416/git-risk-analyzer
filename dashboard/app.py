@@ -110,6 +110,15 @@ hr { border-color: #21262D !important; }
     text-transform: uppercase;
     margin-bottom: 12px;
 }
+
+/* hide Press Enter tooltip */
+small[data-testid="InputInstructions"] { display: none !important; }
+[data-testid="InputInstructions"] { display: none !important; }
+
+/* hide anchor link on headings */
+h1 a, h2 a, h3 a { display: none !important; }
+.stMarkdown h1 a { display: none !important; }
+[data-testid="StyledLinkIconContainer"] { display: none !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -145,18 +154,29 @@ PLOT_THEME = {
 with st.sidebar:
     st.markdown("""
     <div style='padding: 8px 0 20px'>
-        <div style='font-family:JetBrains Mono;font-size:15px;font-weight:500;color:#E6EDF3;letter-spacing:0.02em;'>
-            git-risk-analyzer
-        </div>
-        <div style='font-size:11px;color:#8B949E;margin-top:3px;letter-spacing:0.05em;text-transform:uppercase;'>
-            ML-powered bug prediction
+        <div style='display:flex;align-items:center;gap:10px;'>
+            <span style='font-size:28px;color:#58A6FF;line-height:1;'>⬡</span>
+            <div>
+                <div style='font-family:JetBrains Mono;font-size:14px;font-weight:600;color:#E6EDF3;letter-spacing:0.02em;'>
+                    git-risk-analyzer
+                </div>
+                <div style='font-size:10px;color:#8B949E;letter-spacing:0.06em;text-transform:uppercase;'>
+                    ML-powered bug prediction
+                </div>
+            </div>
         </div>
     </div>
     """, unsafe_allow_html=True)
 
     st.markdown('<div class="section-label">Repository</div>', unsafe_allow_html=True)
     github_url  = st.text_input("GitHub URL", placeholder="https://github.com/owner/repo", label_visibility="collapsed")
-    analyze_btn = st.button("Analyze Repository")
+    analyze_btn = st.button("Analyze Repository", use_container_width=True)
+
+    if "results" in st.session_state:
+        if st.button("← Home", use_container_width=True):
+            del st.session_state["results"]
+            del st.session_state["repo_name"]
+            st.rerun()
 
     st.divider()
     st.markdown('<div class="section-label">About</div>', unsafe_allow_html=True)
@@ -169,56 +189,92 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
 
-# ── main ─────────────────────────────────────────────
-if not analyze_btn or not github_url:
+# ── run pipeline only on button click ────────────────
+# ── run pipeline only on button click ────────────────
+if analyze_btn and github_url:
+    repo_name    = github_url.rstrip("/").split("/")[-1]
+    clone_dir    = f"data/repos/{repo_name}"
+    commits_csv  = f"data/{repo_name}_commits.csv"
+    features_csv = f"data/{repo_name}_features.csv"
+
+    try:
+        with st.status(f"Analyzing **{repo_name}**...", expanded=True) as status:
+            st.write("Cloning repository...")
+            clone_repo(github_url, clone_dir)
+
+            st.write("Mining commit history...")
+            mine_commits(clone_dir, commits_csv)
+
+            st.write("Labeling bug commits...")
+            label_commits(commits_csv)
+
+            st.write("Building feature set...")
+            features_df = build_dataset(
+                data_dir="data",
+                output_path=features_csv,
+                single_repo_csv=commits_csv,
+            )
+
+            st.write("Running predictions...")
+            results = predict_repo(features_df)
+
+            status.update(label="Analysis complete", state="complete")
+
+        st.session_state["results"] = results
+        st.session_state["repo_name"] = repo_name
+
+    except Exception:
+        st.error("❌ Failed to analyze repository.")
+        st.stop()
+
+# ── landing page ──────────────────────────────────────
+if "results" not in st.session_state:
     st.markdown("""
-    <div style='padding: 100px 0 48px; text-align:center;'>
-        <div style='font-family:JetBrains Mono;font-size:11px;color:#30363D;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:20px;'>
+    <div style='display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 20px;'>
+        <div style='font-size:64px;color:#58A6FF;line-height:1;margin-bottom:24px;'>⬡</div>
+        <div style='font-family:JetBrains Mono;font-size:11px;color:#3D444D;
+                    letter-spacing:0.22em;text-transform:uppercase;margin-bottom:16px;'>
             ML-POWERED BUG PREDICTION
         </div>
-        <h1 style='color:#E6EDF3;font-size:44px;font-weight:600;margin:0 0 16px;letter-spacing:-1px;line-height:1.2;'>
-            Find bugs before<br>they find you.
-        </h1>
-        <p style='color:#8B949E;font-size:15px;max-width:420px;margin:0 auto 48px;line-height:1.7;'>
-            Paste any public GitHub repo and get an ML analysis of which files carry the highest bug risk — based on real commit history.
+        <div style='color:#E6EDF3;font-size:52px;font-weight:700;
+                   margin:0 0 18px;letter-spacing:-2px;line-height:1.1;'>
+            Find bugs <span style='color:#58A6FF;'>before</span><br>they find you.
+        </div>
+        <p style='color:#8B949E;font-size:15px;max-width:420px;
+                  margin:0 auto 52px;line-height:1.8;font-weight:300;'>
+            Paste any public GitHub repo URL and get an ML-powered risk analysis
+            of every file — trained on 320,000+ real commits.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
     c1, c2, c3 = st.columns(3)
-    for col, title, desc in [
-        (c1, "320k+ commits analyzed", "Trained on Flask, Django, Scikit-learn, Pytest and more"),
-        (c2, "86% accuracy", "XGBoost model with ROC AUC of 0.92"),
-        (c3, "11 features", "Change frequency, dev churn, commit size and more"),
+    for col, icon, title, desc in [
+        (c1, "⬡", "320k+ commits", "Trained on Flask, Django, Scikit-learn, Pytest and more"),
+        (c2, "◎", "86% accuracy", "XGBoost with ROC AUC of 0.92 on held-out test set"),
+        (c3, "◇", "11 features", "Churn · Frequency · Commit size · File age · LOC"),
     ]:
         col.markdown(f"""
-        <div style='background:#161B22;border:1px solid #21262D;border-radius:8px;padding:20px;text-align:center;'>
-            <div style='font-size:20px;font-weight:600;color:#58A6FF;margin-bottom:6px;'>{title}</div>
-            <div style='font-size:13px;color:#8B949E;'>{desc}</div>
+        <div style='background:#161B22;border:1px solid #21262D;border-radius:10px;
+                    padding:28px 20px;text-align:center;'>
+            <div style='font-size:24px;color:#58A6FF;margin-bottom:10px;'>{icon}</div>
+            <div style='font-size:17px;font-weight:600;color:#E6EDF3;margin-bottom:6px;'>{title}</div>
+            <div style='font-size:12px;color:#8B949E;line-height:1.6;'>{desc}</div>
         </div>
         """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='text-align:center;padding:36px 0 0;'>
+        <div style='font-size:12px;color:#3D444D;font-family:JetBrains Mono;letter-spacing:0.05em;'>
+            ↑ paste a github url in the sidebar to get started
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.stop()
 
-# ── analysis ─────────────────────────────────────────
-repo_name    = github_url.rstrip("/").split("/")[-1]
-clone_dir    = f"data/repos/{repo_name}"
-commits_csv  = f"data/{repo_name}_commits.csv"
-features_csv = f"data/{repo_name}_features.csv"
-
-with st.status(f"Analyzing **{repo_name}**...", expanded=True) as status:
-    st.write("Cloning repository...")
-    clone_repo(github_url, clone_dir)
-    st.write("Mining commit history...")
-    mine_commits(clone_dir, commits_csv)
-    st.write("Labeling bug commits...")
-    label_commits(commits_csv)
-    st.write("Building feature set...")
-    features_df = build_dataset(data_dir="data", output_path=features_csv, single_repo_csv=commits_csv)
-    st.write("Running predictions...")
-    results = predict_repo(features_df)
-    st.write("Prediction complete")
-
-    status.update(label="Analysis complete", state="complete")
+# ── load from session state ───────────────────────────
+results   = st.session_state["results"]
+repo_name = st.session_state["repo_name"]
 
 high   = results[results["risk_label"] == "High"]
 medium = results[results["risk_label"] == "Medium"]
@@ -298,7 +354,7 @@ st.divider()
 # ── table ────────────────────────────────────────────
 st.markdown('<div class="section-label">All files</div>', unsafe_allow_html=True)
 
-col_f1, col_f2, _ = st.columns([1, 1, 2])
+col_f1, col_f2, _ = st.columns([3, 3, 4])
 
 with col_f1:
     risk_filter = st.multiselect(
@@ -322,60 +378,34 @@ if search:
         filtered["file_path"].str.contains(search, case=False)
     ]
 
-filtered = filtered.reset_index(drop=True)
+display = filtered[[
+    "file_path",
+    "risk_score",
+    "risk_label",
+    "total_commits",
+    "unique_authors",
+    "file_age_days",
+    "avg_nloc"
+]].rename(columns={
+    "file_path": "File",
+    "risk_score": "Risk Score",
+    "risk_label": "Level",
+    "total_commits": "Commits",
+    "unique_authors": "Authors",
+    "file_age_days": "Age (days)",
+    "avg_nloc": "Avg LOC",
+})
 
-def risk_color(label):
-    return {"High": "#F85149", "Medium": "#D29922", "Low": "#3FB950"}.get(str(label), "#8B949E")
-
-def risk_bg(label):
-    return {"High": "#3D1A1A", "Medium": "#2D1F00", "Low": "#0D2818"}.get(str(label), "#161B22")
-
-rows = ""
-for _, row in filtered.iterrows():
-    color = risk_color(row["risk_label"])
-    bg    = risk_bg(row["risk_label"])
-    score = row["risk_score"]
-    rows += f"""
-    <tr>
-        <td style='padding:10px 12px;color:#E6EDF3;font-family:JetBrains Mono;font-size:12px;'>{row['file_path']}</td>
-        <td style='padding:10px 12px;min-width:160px;'>
-            <div style='display:flex;align-items:center;gap:8px;'>
-                <div style='flex:1;background:#21262D;border-radius:4px;height:6px;'>
-                    <div style='width:{score}%;background:{color};border-radius:4px;height:6px;'></div>
-                </div>
-                <span style='font-size:12px;color:{color};font-weight:500;min-width:38px;'>{score}%</span>
-            </div>
-        </td>
-        <td style='padding:10px 12px;'>
-            <span style='background:{bg};color:{color};border:1px solid {color};
-                         padding:2px 10px;border-radius:20px;font-size:11px;font-weight:500;'>
-                {row['risk_label']}
-            </span>
-        </td>
-        <td style='padding:10px 12px;color:#8B949E;font-size:13px;text-align:right;'>{int(row['total_commits'])}</td>
-        <td style='padding:10px 12px;color:#8B949E;font-size:13px;text-align:right;'>{int(row['unique_authors'])}</td>
-        <td style='padding:10px 12px;color:#8B949E;font-size:13px;text-align:right;'>{int(row['file_age_days'])}</td>
-        <td style='padding:10px 12px;color:#8B949E;font-size:13px;text-align:right;'>{round(row['avg_nloc'], 1)}</td>
-    </tr>
-    """
-
-st.markdown(f"""
-<div style='border:1px solid #21262D;border-radius:8px;overflow:hidden;'>
-<table style='width:100%;border-collapse:collapse;'>
-    <thead>
-        <tr style='background:#161B22;border-bottom:1px solid #21262D;'>
-            <th style='padding:10px 12px;text-align:left;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>FILE</th>
-            <th style='padding:10px 12px;text-align:left;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>RISK SCORE</th>
-            <th style='padding:10px 12px;text-align:left;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>LEVEL</th>
-            <th style='padding:10px 12px;text-align:right;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>COMMITS</th>
-            <th style='padding:10px 12px;text-align:right;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>AUTHORS</th>
-            <th style='padding:10px 12px;text-align:right;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>AGE (DAYS)</th>
-            <th style='padding:10px 12px;text-align:right;font-size:11px;color:#8B949E;font-weight:500;letter-spacing:0.05em;'>AVG LOC</th>
-        </tr>
-    </thead>
-    <tbody>
-        {rows}
-    </tbody>
-</table>
-</div>
-""", unsafe_allow_html=True)
+st.dataframe(
+    display,
+    use_container_width=True,
+    hide_index=True,
+    column_config={
+        "Risk Score": st.column_config.ProgressColumn(
+            "Risk Score",
+            min_value=0,
+            max_value=100,
+            format="%.1f%%"
+        ),
+    }
+)
