@@ -11,7 +11,11 @@ REPOS = [
     "https://github.com/django/django",
     "https://github.com/psf/requests",
     "https://github.com/scikit-learn/scikit-learn",
-    # small-medium, very popular
+    "https://github.com/ansible/ansible",          
+    "https://github.com/home-assistant/core",       
+    "https://github.com/keras-team/keras",          
+    "https://github.com/apache/airflow",            
+    "https://github.com/fastapi/fastapi", 
     "https://github.com/pallets/click",          
     "https://github.com/pytest-dev/pytest",       
     "https://github.com/httpie/cli",               

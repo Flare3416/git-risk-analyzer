@@ -38,6 +38,14 @@ data/repos/
 # Repo-specific feature files (generated on the fly by dashboard)
 data/*_features.csv
 
+# Manually ignored large commit datasets
+data/airflow_commits.csv
+data/core_commits.csv
+data/keras_commits.csv
+data/fastapi_commits.csv
+data/ansible_commits.csv
+
 # Keep training CSVs and model — needed for deployment
 # data/*_commits.csv  ← NOT ignored
 # model/saved_model.pkl ← NOT ignored
+

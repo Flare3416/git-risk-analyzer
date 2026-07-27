@@ -182,7 +182,7 @@ with st.sidebar:
     st.markdown('<div class="section-label">About</div>', unsafe_allow_html=True)
     st.markdown("""
     <div style='font-size:12px;color:#8B949E;line-height:1.7;'>
-    Analyzes git commit history to predict which files are most likely to contain bugs using XGBoost trained on 320k+ commits.
+    Analyzes git commit history to predict which files are most likely to contain bugs using XGBoost trained on 1,400,000+ commits.
     <br><br>
     <b style='color:#E6EDF3;'>Features used</b><br>
     Change frequency · Developer churn · Commit size · File age · Code volume
@@ -243,15 +243,15 @@ if "results" not in st.session_state:
         <p style='color:#8B949E;font-size:15px;max-width:420px;
                   margin:0 auto 52px;line-height:1.8;font-weight:300;'>
             Paste any public GitHub repo URL and get an ML-powered risk analysis
-            of every file — trained on 320,000+ real commits.
+            of every file — trained on 1,400,000+ real commits.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
     c1, c2, c3 = st.columns(3)
     for col, icon, title, desc in [
-        (c1, "⬡", "320k+ commits", "Trained on Flask, Django, Scikit-learn, Pytest and more"),
-        (c2, "◎", "86% accuracy", "XGBoost with ROC AUC of 0.92 on held-out test set"),
+        (c1, "⬡", "1.4M+ commits", "Trained on Flask, Django, Scikit-learn, Pytest and more"),
+        (c2, "◎", "83% accuracy", "XGBoost with ROC AUC of 0.92 on held-out test set"),
         (c3, "◇", "11 features", "Churn · Frequency · Commit size · File age · LOC"),
     ]:
         col.markdown(f"""
