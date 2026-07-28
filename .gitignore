@@ -35,17 +35,12 @@ env/
 # Cloned repos (temp, deleted after mining anyway)
 data/repos/
 
-# Repo-specific feature files (generated on the fly by dashboard)
-data/*_features.csv
+# Ignore ALL data CSVs by default
+data/*.csv
 
-# Manually ignored large commit datasets
-data/airflow_commits.csv
-data/core_commits.csv
-data/keras_commits.csv
-data/fastapi_commits.csv
-data/ansible_commits.csv
+# Keep labeled training data only
+!data/*_labeled.csv
 
-# Keep training CSVs and model — needed for deployment
-# data/*_commits.csv  ← NOT ignored
-# model/saved_model.pkl ← NOT ignored
-
+# Keep model directory for deployment
+!model/
+!model/**

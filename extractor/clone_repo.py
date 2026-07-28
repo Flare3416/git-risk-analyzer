@@ -1,16 +1,28 @@
 import os
 import shutil
-from git import Repo
+from git import Repo, GitCommandError
 
-def clone_repo(github_url: str, clone_dir: str = "data/repo") -> str:
-    # If repo already cloned, delete and reclone fresh
+def clone_repo(
+    github_url: str,
+    clone_dir: str = "data/repo",
+    force: bool = False,
+) -> str:
     if os.path.exists(clone_dir):
-        shutil.rmtree(clone_dir)
-    
+        if force:
+            shutil.rmtree(clone_dir)
+            print(f"Removed existing repo at {clone_dir}")
+        else:
+            print(f"Repo already exists at {clone_dir} — skipping clone")
+            return clone_dir
+
     print(f"Cloning {github_url} ...")
-    Repo.clone_from(github_url, clone_dir)
-    print(f"Cloned successfully to {clone_dir}")
-    
+    try:
+        # Full clone — partial clones break git log --numstat
+        Repo.clone_from(github_url, clone_dir)
+        print(f"Cloned → {clone_dir}")
+    except GitCommandError as e:
+        raise RuntimeError(f"Failed to clone {github_url}: {e}")
+
     return clone_dir
 
 
