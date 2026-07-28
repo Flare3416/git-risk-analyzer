@@ -23,7 +23,6 @@ env/
 
 # IDE / Editor
 .vscode/
-.vscode/settings.json
 .idea/
 *.code-workspace
 

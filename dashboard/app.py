@@ -1,13 +1,15 @@
 # dashboard/app.py
-import streamlit as st
-import pandas as pd
-import plotly.graph_objects as go
-import plotly.express as px
-import pickle
 import os
 import sys
+import pickle
+import tempfile
+import shutil
+
 import numpy as np
-from datetime import datetime
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+import streamlit as st
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
@@ -16,177 +18,122 @@ from extractor.commit_miner import mine_commits
 from extractor.labeler import label_commits
 from features.build_dataset import build_dataset
 
+# ─────────────────────────────────────────────────────────
+# PAGE CONFIG
+# ─────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Git Risk Analyzer",
-    page_icon="https://raw.githubusercontent.com/github/explore/main/topics/git/git.png",
+    page_icon="⬡",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
+# ─────────────────────────────────────────────────────────
+# CUSTOM CSS
+# ─────────────────────────────────────────────────────────
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .stApp { background-color: #0D1117; }
-
-[data-testid="stSidebar"] {
-    background-color: #161B22;
-    border-right: 1px solid #21262D;
-}
+[data-testid="stSidebar"] { background-color: #161B22; border-right: 1px solid #21262D; }
 [data-testid="stSidebar"] .block-container { padding-top: 2rem; }
-
 #MainMenu, footer, header, [data-testid="stToolbar"] { visibility: hidden !important; }
 .stDeployButton { display: none !important; }
-
 [data-testid="stMetric"] {
     background: linear-gradient(180deg, #161B22 0%, #0D1117 100%);
-    border: 1px solid #21262D;
-    border-radius: 12px;
+    border: 1px solid #21262D; border-radius: 12px;
     padding: 1.25rem 1.5rem;
     box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset;
 }
 [data-testid="stMetricLabel"] {
-    color: #8B949E !important;
-    font-size: 11px !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    color: #8B949E !important; font-size: 11px !important;
+    font-weight: 600 !important; letter-spacing: 0.08em; text-transform: uppercase;
 }
 [data-testid="stMetricValue"] {
-    color: #E6EDF3 !important;
-    font-size: 32px !important;
-    font-weight: 700 !important;
-    letter-spacing: -0.5px;
+    color: #E6EDF3 !important; font-size: 32px !important;
+    font-weight: 700 !important; letter-spacing: -0.5px;
 }
-
 .stTextInput input, .stSelectbox div[data-baseweb="select"] {
-    background: #0D1117 !important;
-    border: 1px solid #30363D !important;
-    border-radius: 8px !important;
-    color: #E6EDF3 !important;
-    font-family: 'JetBrains Mono', monospace !important;
-    font-size: 13px !important;
+    background: #0D1117 !important; border: 1px solid #30363D !important;
+    border-radius: 8px !important; color: #E6EDF3 !important;
+    font-family: 'JetBrains Mono', monospace !important; font-size: 13px !important;
 }
 .stTextInput input:focus {
     border-color: #58A6FF !important;
     box-shadow: 0 0 0 3px rgba(88,166,255,0.12) !important;
 }
-
 .stButton > button[kind="primary"] {
     background: linear-gradient(180deg, #2EA043 0%, #238636 100%) !important;
-    color: #fff !important;
-    border: 1px solid rgba(46,160,67,0.4) !important;
-    border-radius: 8px !important;
-    font-weight: 600 !important;
-    font-size: 14px !important;
-    width: 100% !important;
-    padding: 0.65rem !important;
-    transition: all 0.2s ease !important;
+    color: #fff !important; border: 1px solid rgba(46,160,67,0.4) !important;
+    border-radius: 8px !important; font-weight: 600 !important;
+    font-size: 14px !important; width: 100% !important;
+    padding: 0.65rem !important; transition: all 0.2s ease !important;
 }
 .stButton > button[kind="primary"]:hover {
     background: linear-gradient(180deg, #3FB950 0%, #2EA043 100%) !important;
     box-shadow: 0 0 12px rgba(46,160,67,0.25) !important;
 }
 .stButton > button[kind="secondary"] {
-    background: #21262D !important;
-    border: 1px solid #30363D !important;
-    color: #C9D1D9 !important;
-    border-radius: 8px !important;
+    background: #21262D !important; border: 1px solid #30363D !important;
+    color: #C9D1D9 !important; border-radius: 8px !important;
 }
 .stButton > button[kind="secondary"]:hover {
-    background: #30363D !important;
-    border-color: #8B949E !important;
+    background: #30363D !important; border-color: #8B949E !important;
 }
-
 [data-testid="stDataFrame"] {
-    border: 1px solid #21262D;
-    border-radius: 10px;
-    overflow: hidden;
+    border: 1px solid #21262D; border-radius: 10px; overflow: hidden;
 }
 [data-testid="stDataFrame"] th {
-    background: #161B22 !important;
-    color: #E6EDF3 !important;
-    font-weight: 600 !important;
-    font-size: 12px !important;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    background: #161B22 !important; color: #E6EDF3 !important;
+    font-weight: 600 !important; font-size: 12px !important;
+    text-transform: uppercase; letter-spacing: 0.05em;
 }
 [data-testid="stDataFrame"] td {
-    font-size: 13px !important;
-    color: #C9D1D9 !important;
+    font-size: 13px !important; color: #C9D1D9 !important;
 }
-
 .stMultiSelect [data-baseweb="tag"] {
-    background: #1F6FEB !important;
-    color: #fff !important;
+    background: #1F6FEB !important; color: #fff !important;
     border-radius: 4px !important;
 }
-
 [data-testid="stStatus"] {
-    background: #161B22 !important;
-    border: 1px solid #21262D !important;
+    background: #161B22 !important; border: 1px solid #21262D !important;
     border-radius: 10px !important;
 }
-[data-testid="stExpander"] {
-    border: 1px solid #21262D;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
 .section-label {
-    font-size: 11px;
-    font-weight: 700;
-    color: #8B949E;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 14px;
+    font-size: 11px; font-weight: 700; color: #8B949E;
+    letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px;
 }
-
 .spotlight-card {
     background: linear-gradient(135deg, #161B22 0%, #111820 100%);
-    border: 1px solid #30363D;
-    border-radius: 14px;
-    padding: 28px;
-    margin-bottom: 28px;
-    position: relative;
-    overflow: hidden;
+    border: 1px solid #30363D; border-radius: 14px;
+    padding: 28px; margin-bottom: 28px;
+    position: relative; overflow: hidden;
 }
 .spotlight-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
     background: linear-gradient(90deg, #F85149, #D29922, #3FB950);
     opacity: 0.6;
 }
 .risk-pill {
-    display: inline-block;
-    padding: 5px 16px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border: 1px solid;
+    display: inline-block; padding: 5px 16px;
+    border-radius: 20px; font-size: 12px;
+    font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; border: 1px solid;
 }
 .pill-high   { background: rgba(248,81,73,0.12); color: #F85149; border-color: rgba(248,81,73,0.35); }
 .pill-medium { background: rgba(210,153,34,0.12); color: #D29922; border-color: rgba(210,153,34,0.35); }
 .pill-low    { background: rgba(63,185,80,0.12); color: #3FB950; border-color: rgba(63,185,80,0.35); }
-
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: #0D1117; }
 ::-webkit-scrollbar-thumb { background: #30363D; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #484f58; }
-
 h1 a, h2 a, h3 a, [data-testid="StyledLinkIconContainer"] { display: none !important; }
 small[data-testid="InputInstructions"], [data-testid="InputInstructions"] { display: none !important; }
-
 .stDownloadButton > button {
-    background: #1F6FEB !important;
-    border-color: #388BFD !important;
-    color: #fff !important;
-    border-radius: 8px !important;
+    background: #1F6FEB !important; border-color: #388BFD !important;
+    color: #fff !important; border-radius: 8px !important;
     font-weight: 500 !important;
 }
 </style>
@@ -199,6 +146,9 @@ PLOT_THEME = {
     "font_family": "Inter",
 }
 
+# ─────────────────────────────────────────────────────────
+# HELPERS
+# ─────────────────────────────────────────────────────────
 @st.cache_resource(show_spinner=False)
 def load_model_bundle():
     path = "model/saved_model.pkl"
@@ -218,7 +168,7 @@ def get_model_status():
 def get_training_stats():
     stats = {
         "repos": 15, "commits": "873K+", "files": "55K+",
-        "roc_auc": "0.89", "f1": "0.80", "features": 11,
+        "roc_auc": "0.89", "pr_auc": "0.91", "features": 11,
     }
     try:
         if os.path.exists("data/features.csv"):
@@ -232,8 +182,8 @@ def get_training_stats():
         if metrics:
             if "roc_auc" in metrics:
                 stats["roc_auc"] = f"{metrics['roc_auc']:.2f}"
-            if "weighted_f1" in metrics:
-                stats["f1"] = f"{metrics['weighted_f1']:.2f}"
+            if "pr_auc" in metrics:
+                stats["pr_auc"] = f"{metrics['pr_auc']:.2f}"
     except Exception:
         pass
     return stats
@@ -257,6 +207,7 @@ def predict_repo(features_df):
         df["risk_score"],
         bins=[0, 40, 70, 100],
         labels=["Low", "Medium", "High"],
+        include_lowest=True,
     )
     df["confidence"] = pd.cut(
         proba,
@@ -265,6 +216,9 @@ def predict_repo(features_df):
     )
     return df.sort_values("risk_score", ascending=False).reset_index(drop=True)
 
+# ─────────────────────────────────────────────────────────
+# SIDEBAR
+# ─────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("""
     <div style='padding: 0 0 24px'>
@@ -292,16 +246,13 @@ with st.sidebar:
         label_visibility="collapsed",
     )
 
-    col_btn1, col_btn2 = st.columns([3, 1])
-    with col_btn1:
-        analyze_btn = st.button("Analyze", use_container_width=True, type="primary")
-    with col_btn2:
-        clear_btn = st.button("Clear", use_container_width=True, type="secondary")
+    analyze_btn = st.button("Analyze", use_container_width=True, type="primary")
 
-    if clear_btn and "results" in st.session_state:
-        for k in ["results", "repo_name", "last_repo", "features_csv"]:
-            st.session_state.pop(k, None)
-        st.rerun()
+    if "results" in st.session_state:
+        if st.button("← Home", use_container_width=True, type="secondary"):
+            for k in ["results", "repo_name", "last_repo"]:
+                st.session_state.pop(k, None)
+            st.rerun()
 
     st.divider()
     st.markdown('<div class="section-label">System Status</div>', unsafe_allow_html=True)
@@ -341,48 +292,61 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
 
+# ─────────────────────────────────────────────────────────
+# MAIN PIPELINE  (CLOUD: uses /tmp, auto-deletes)
+# ─────────────────────────────────────────────────────────
 if analyze_btn and github_url:
     repo_name = github_url.rstrip("/").split("/")[-1]
-    clone_dir = f"data/repos/{repo_name}"
-    commits_csv = f"data/{repo_name}_commits.csv"
-    labeled_csv = f"data/{repo_name}_labeled.csv"
-    features_csv = f"data/{repo_name}_features.csv"
 
+    # Prevent double-run in same session
     if st.session_state.get("last_repo") == repo_name and "results" in st.session_state:
         st.toast(f"Showing cached results for {repo_name}", icon="✅")
     else:
         progress_text = st.empty()
         progress_bar = st.progress(0)
 
-        steps = [
-            ("🔍 Cloning repository...", 0.05),
-            ("⛏️ Mining commit history...", 0.25),
-            ("🏷️ Labeling bug-inducing commits...", 0.45),
-            ("🧬 Building feature set...", 0.65),
-            ("🧠 Running ML predictions...", 0.85),
-            ("✅ Finalizing results...", 0.95),
-        ]
+        # Create a temp directory for this request
+        temp_base = tempfile.mkdtemp(prefix="gitrisk_")
+        clone_dir = os.path.join(temp_base, repo_name)
+        commits_csv = os.path.join(temp_base, f"{repo_name}_commits.csv")
+        labeled_csv = os.path.join(temp_base, f"{repo_name}_labeled.csv")
+        features_csv = os.path.join(temp_base, f"{repo_name}_features.csv")
 
         try:
+            steps = [
+                ("🔍 Cloning repository...", 0.05),
+                ("⛏️ Mining commit history...", 0.25),
+                ("🏷️ Labeling bug-inducing commits...", 0.45),
+                ("🧬 Building feature set...", 0.65),
+                ("🧠 Running ML predictions...", 0.85),
+                ("✅ Finalizing results...", 0.95),
+            ]
+
             for msg, pct in steps:
-                progress_text.markdown(f"<span style='color:#8B949E;font-size:13px;'>{msg}</span>", unsafe_allow_html=True)
+                progress_text.markdown(
+                    f"<span style='color:#8B949E;font-size:13px;'>{msg}</span>",
+                    unsafe_allow_html=True,
+                )
                 progress_bar.progress(int(pct * 100))
 
                 if pct == 0.05:
                     clone_repo(github_url, clone_dir)
                 elif pct == 0.25:
-                    mine_commits(clone_dir, commits_csv, keep_repo=True)
+                    mine_commits(clone_dir, commits_csv, keep_repo=False)
                 elif pct == 0.45:
                     label_commits(commits_csv, labeled_csv)
                 elif pct == 0.65:
-                    build_dataset(data_dir="data", output_path=features_csv, single_repo_csv=labeled_csv)
+                    build_dataset(
+                        data_dir=temp_base,
+                        output_path=features_csv,
+                        single_repo_csv=labeled_csv,
+                    )
                 elif pct == 0.85:
                     feat_df = pd.read_csv(features_csv)
                     results = predict_repo(feat_df)
                     st.session_state["results"] = results
                     st.session_state["repo_name"] = repo_name
                     st.session_state["last_repo"] = repo_name
-                    st.session_state["features_csv"] = features_csv
 
             progress_text.empty()
             progress_bar.empty()
@@ -395,6 +359,14 @@ if analyze_btn and github_url:
                 st.code(str(e))
             st.stop()
 
+        finally:
+            # Always delete temp files, even if the pipeline crashed
+            if os.path.exists(temp_base):
+                shutil.rmtree(temp_base)
+
+# ─────────────────────────────────────────────────────────
+# LANDING PAGE
+# ─────────────────────────────────────────────────────────
 if "results" not in st.session_state:
     stats = get_training_stats()
     _, _, _, _, _, model_name = get_model_status()
@@ -421,7 +393,7 @@ if "results" not in st.session_state:
     c1, c2, c3, c4 = st.columns(4)
     cards = [
         (c1, stats["roc_auc"], "ROC-AUC", "Temporal validation"),
-        (c2, stats["f1"], "F1 Score", "Weighted harmonic mean"),
+        (c2, stats["pr_auc"], "PR-AUC", "Precision-recall score"),
         (c3, stats["files"], "Training Files", "From 15 major repos"),
         (c4, str(stats["features"]), "Features", "Commit & code metrics"),
     ]
@@ -466,9 +438,11 @@ if "results" not in st.session_state:
 
     st.stop()
 
+# ─────────────────────────────────────────────────────────
+# RESULTS DASHBOARD
+# ─────────────────────────────────────────────────────────
 results = st.session_state["results"]
 repo_name = st.session_state["repo_name"]
-features_csv = st.session_state.get("features_csv")
 _, _, _, _, _, model_name = get_model_status()
 
 high = results[results["risk_label"] == "High"]
@@ -521,16 +495,6 @@ m3.metric("Medium", len(medium), delta=f"{len(medium)/len(results)*100:.1f}%", d
 m4.metric("Low Risk", len(low), delta=f"{len(low)/len(results)*100:.1f}%", delta_color="normal")
 m5.metric("Avg Risk", f"{results['risk_score'].mean():.1f}%")
 m6.metric("Buggy Predicted", int(results["risk_label"].isin(["High","Medium"]).sum()))
-
-if features_csv and os.path.exists(features_csv):
-    with open(features_csv, "r") as f:
-        st.download_button(
-            label="Download CSV",
-            data=f.read(),
-            file_name=f"{repo_name}_risk_analysis.csv",
-            mime="text/csv",
-            use_container_width=True,
-        )
 
 st.divider()
 
