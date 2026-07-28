@@ -246,7 +246,7 @@ def predict_repo(features_df):
 
     df = features_df.copy()
     df = df.dropna(subset=feature_cols)
-    X = df[feature_cols].values
+    X = df[feature_cols]
 
     if scaler is not None:
         X = scaler.transform(X)
