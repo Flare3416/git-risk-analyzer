@@ -55,6 +55,14 @@ def predict(features_path: str = "data/features.csv", output_path: str = "data/p
         console.print(f"ROC-AUC: [green]{metrics.get('roc_auc', 0):.4f}[/green]")
 
     df = pd.read_csv(features_path)
+    
+    # Impute missing avg_nloc before dropna to support legacy cache prediction
+    if "avg_nloc" in df.columns and "avg_nloc" in feature_cols:
+        median_nloc = df["avg_nloc"].median()
+        if pd.isna(median_nloc) or median_nloc == 0:
+            median_nloc = 50.0
+        df["avg_nloc"] = df["avg_nloc"].fillna(median_nloc)
+        
     before = len(df)
     df = df.dropna(subset=feature_cols)
     dropped = before - len(df)

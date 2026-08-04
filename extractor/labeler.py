@@ -45,28 +45,22 @@ def label_commits(input_path: str, output_path: str = None, bug_lookback_commits
     df["is_bug_fix"] = df["msg"].apply(is_real_bug_fix).astype(int)
     df["is_buggy"] = 0
 
+    import numpy as np
+    buggy_indices = []
     path_col = "file_path" if "file_path" in df.columns else "file"
-
-    fix_mask = df["is_bug_fix"] == 1
-    fix_indices = df[fix_mask].index.tolist()
-
-    for idx in fix_indices:
-        file_p = df.loc[idx, path_col]
-        fix_date = df.loc[idx, date_col]
-
+    # df is sorted by date_col, so group subsets will also be chronological
+    for file_p, group in df.groupby(path_col):
         if pd.isna(file_p):
             continue
+        # Find local indices in the group where it is a bug fix
+        fix_positions = np.where(group["is_bug_fix"] == 1)[0]
+        for pos in fix_positions:
+            # We want to label bug_lookback_commits before the fix commit
+            start_pos = max(0, pos - bug_lookback_commits)
+            # Fetch the original dataframe indices corresponding to these group elements
+            buggy_indices.extend(group.index[start_pos:pos].tolist())
 
-        candidates = df[
-            (df[path_col] == file_p) &
-            (df[date_col] < fix_date)
-        ]
-
-        if not candidates.empty:
-            # Label the last N commits before fix as potentially buggy
-            # (not just 1, since bugs often persist across commits)
-            prev_indices = candidates.index[-bug_lookback_commits:]
-            df.loc[prev_indices, "is_buggy"] = 1
+    df.loc[buggy_indices, "is_buggy"] = 1
 
     total = len(df)
     bug_fixes = df["is_bug_fix"].sum()

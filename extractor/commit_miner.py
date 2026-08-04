@@ -92,6 +92,51 @@ def mine_commits(
 
     df = pd.DataFrame(records)
 
+    # Reconstruct historical lines of code (nloc) backward from the current state of HEAD
+    if not df.empty:
+        print("  Reconstructing historical NLOC (Lines of Code) ...")
+        # Ensure we sort chronologically descending (newest first) to run backward
+        date_col = "author_date" if "author_date" in df.columns else "date"
+        df["_datetime"] = pd.to_datetime(df[date_col], format="ISO8601", utc=True, errors="coerce")
+        df_sorted = df.sort_values("_datetime", ascending=False)
+
+        # Get current lines of code of all existing files in working directory
+        current_locs = {}
+        if os.path.exists(repo_path):
+            for root, dirs, files in os.walk(repo_path):
+                if ".git" in dirs:
+                    dirs.remove(".git")
+                for file in files:
+                    filepath = os.path.relpath(os.path.join(root, file), repo_path)
+                    if _should_skip(filepath):
+                        continue
+                    fullpath = os.path.join(root, file)
+                    try:
+                        with open(fullpath, "r", encoding="utf-8", errors="ignore") as f:
+                            current_locs[filepath] = sum(1 for _ in f)
+                    except Exception:
+                        pass
+
+        # Initialize running LOC for all files ever changed in history
+        running_loc = {fp: current_locs.get(fp, 0) for fp in df_sorted["file_path"].unique()}
+
+        nloc_list = []
+        for idx, row in df_sorted.iterrows():
+            fp = row["file_path"]
+            added = row["lines_added"]
+            deleted = row["lines_deleted"]
+
+            # NLOC at this commit is the accumulated lines of code *after* this commit is applied
+            nloc_list.append(running_loc[fp])
+
+            # Propagate LOC backward: what was the LOC *before* this commit?
+            running_loc[fp] = max(0, running_loc[fp] - added + deleted)
+
+        df_sorted["nloc"] = nloc_list
+        df = df_sorted.drop(columns=["_datetime"]).sort_index()
+    else:
+        df["nloc"] = []
+
     actual_commits = len(parsed_commits)
     print(f"  Parsed {actual_commits:,} commits with metadata")
     print(f"  Extracted {len(df):,} file-change rows")

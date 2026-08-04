@@ -17,8 +17,8 @@ def clone_repo(
 
     print(f"Cloning {github_url} ...")
     try:
-        # Full clone — partial clones break git log --numstat
-        Repo.clone_from(github_url, clone_dir)
+        # Full clone with optimizations (single branch, no tags) to support git log --numstat without remote fetches
+        Repo.clone_from(github_url, clone_dir, single_branch=True, no_tags=True)
         print(f"Cloned → {clone_dir}")
     except GitCommandError as e:
         raise RuntimeError(f"Failed to clone {github_url}: {e}")

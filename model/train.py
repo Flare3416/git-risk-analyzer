@@ -80,7 +80,15 @@ def train(input_path: str = "data/features.csv"):
     print("=" * 60)
 
     df = pd.read_csv(input_path)
-    df = df.dropna(subset=FEATURES + ["is_buggy"])
+    
+    # Impute missing avg_nloc before dropna to preserve training records from other repos
+    if "avg_nloc" in df.columns:
+        median_nloc = df["avg_nloc"].median()
+        if pd.isna(median_nloc) or median_nloc == 0:
+            median_nloc = 50.0  # sensible fallback
+        df["avg_nloc"] = df["avg_nloc"].fillna(median_nloc)
+        
+    df = df.dropna(subset=FEATURES + ["is_buggy"]).reset_index(drop=True)
 
     if "last_commit_date" in df.columns:
         df["last_commit_date"] = pd.to_datetime(df["last_commit_date"])

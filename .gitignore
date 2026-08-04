@@ -31,15 +31,18 @@ env/
 .ruff_cache/
 .mypy_cache/
 
-# Cloned repos (temp, deleted after mining anyway)
-data/repos/
-
-# Ignore ALL data CSVs by default
-data/*.csv
-
-# Keep labeled training data only
-!data/*_labeled.csv
+# Ignore all mined data, temporary clones and generated CSVs
+data/
 
 # Keep model directory for deployment
 !model/
 !model/**
+
+# Next.js / Node
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*

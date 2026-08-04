@@ -2,8 +2,8 @@
 
 <div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Next.js](https://img.shields.io/badge/Frontend-Next.js%2016-black?logo=next.js&logoColor=white)](https://nextjs.org)
+[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![Scikit-learn](https://img.shields.io/badge/ML-Scikit--Learn-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
 [![XGBoost](https://img.shields.io/badge/XGBoost-Optimized-238636)](https://xgboost.ai)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -20,93 +20,37 @@ Predict which files are most likely to contain bugs using machine learning train
 
 | Landing Page | Analysis Dashboard |
 |:------------:|:-----------------:|
-| ![](img/Preview_1.png) | ![](img/Preview_2.png) |
+| ![](img/landing.png) | ![](img/analysis.png) |
 
 ---
 
-# ✨ Features
+# ✨ Core Features
 
-- 🔮 **Calibrated Bug Risk Prediction**
-  - Produces reliable probabilities instead of raw model scores.
-
-- ⏳ **Temporal Validation**
-  - Trains only on historical data and evaluates on future commits.
-  - Prevents data leakage.
-
-- 🏷️ **SZZ-Inspired Bug Labeling**
-  - Labels bug-inducing commits instead of bug-fixing commits.
-
-- ⚡ **High-Speed Git Mining**
-  - Uses `git log --numstat`
-  - ~100× faster than traditional per-commit diff mining.
-
-- 🧠 **Optimized Machine Learning**
-  - Logistic Regression
-  - XGBoost
-  - Optuna Hyperparameter Optimization
-  - Probability Calibration (Sigmoid)
-
-- 📊 **Interactive Dashboard**
-  - Streamlit
-  - Plotly
-  - GitHub-inspired dark UI
-  - Repository-wide risk analysis
-
-- 📈 **Production-Oriented Pipeline**
-  - Automatic repository cloning
-  - Feature engineering
-  - Prediction
-  - CSV export
+* 🔮 **Calibrated Bug Risk Prediction**: Sigmoid calibration maps raw machine learning scores into meaningful probabilities.
+* 🧠 **Optimized Machine Learning**: XGBoost models hyperparameter-tuned with Optuna, alongside Random Forest and Logistic Regression baselines.
+* ⚡ **High-Speed Git Mining**: Uses optimized single-branch cloning and parses commit details in linear $O(N)$ speed.
+* 🏷️ **SZZ-Inspired Bug Labeling**: Analyzes bug-fixing commits to track back and identify bug-inducing modifications.
+* 📈 **Historical NLOC (Lines of Code)**: Uses a fast backward-propagation algorithm to calculate historical file lengths without expensive git blob downloads.
+* 📊 **Interactive Next.js Dashboard**: Polling progress screens, custom responsive SVG donut charts, search/filter panels, and **SHAP Explainability Badges** showing positive/negative risk contributors.
 
 ---
 
-# 🏗 Pipeline
+# 🏗️ Architecture Flow
 
 ```text
-        GitHub Repository
-                │
-                ▼
-        ┌────────────────┐
-        │ Clone Repository│
-        └────────────────┘
-                │
-                ▼
-        ┌────────────────┐
-        │ Commit Mining  │
-        └────────────────┘
-                │
-                ▼
-        ┌────────────────┐
-        │ SZZ Labeling   │
-        └────────────────┘
-                │
-                ▼
-        ┌────────────────┐
-        │ Feature Builder│
-        └────────────────┘
-                │
-                ▼
-        ┌────────────────┐
-        │ ML Prediction  │
-        └────────────────┘
-                │
-                ▼
-       Risk Report + Dashboard
+               [ Next.js Frontend ] (Port 3000)
+                        │
+                        ▼ (Axios / Fetch API)
+               [ FastAPI Backend ] (Port 8000)
+                        │
+         ┌──────────────┴──────────────┐ (BackgroundTasks)
+         ▼                             ▼
+   [ Git Extractor ]            [ Predictor ]
+   ├── Optimized Clone          ├── Load model/saved_model.pkl
+   ├── O(N) Git Miner           └── Run calibrated inference
+   ├── SZZ Bug Labeler
+   └── Backward NLOC Propagation
 ```
-
----
-
-# ⚙ Pipeline Stages
-
-| Stage | Description |
-|--------|-------------|
-| **Clone** | Clone any public GitHub repository |
-| **Mine** | Extract complete commit history using `git log --numstat` |
-| **Label** | Apply SZZ-inspired temporal bug labeling |
-| **Features** | Aggregate file-level metrics such as churn, authors, age and recency |
-| **Train** | Temporal split + Optuna tuning + Probability Calibration |
-| **Predict** | Predict bug probability for every repository file |
-| **Dashboard** | Interactive visual analytics and risk exploration |
 
 ---
 
@@ -115,275 +59,81 @@ Predict which files are most likely to contain bugs using machine learning train
 ```text
 git-risk-analyzer/
 │
-├── dashboard/
-│   └── app.py
+├── backend/
+│   ├── main.py        # FastAPI endpoints (/api/analyze, /api/jobs/{id})
+│   └── tasks.py       # Asynchronous background analysis worker tasks
+│
+├── frontend/
+│   ├── src/app/
+│   │   ├── page.tsx   # React client-side landing and dashboard page
+│   │   ├── layout.tsx # Root layout
+│   │   └── icon.tsx   # Dynamic SVG favicon generator
+│   └── package.json
 │
 ├── extractor/
-│   ├── clone_repo.py
-│   ├── commit_miner.py
-│   ├── labeler.py
-│   └── run_all.py
+│   ├── clone_repo.py     # Optimized single-branch git cloner
+│   ├── commit_miner.py   # Fast-miner & backward NLOC propagator
+│   ├── labeler.py        # Optimized SZZ-inspired bug labeler
+│   └── run_all.py        # Multi-repo miner runner
 │
 ├── features/
-│   └── build_dataset.py
+│   └── build_dataset.py  # File-level aggregations (churn, author, age)
 │
 ├── model/
-│   ├── train.py
-│   ├── predict.py
-│   ├── evaluate.py
-│   └── saved_model.pkl
+│   ├── train.py          # Optuna hyperparameter tuner & model selector
+│   ├── predict.py        # Local prediction CLI
+│   ├── evaluate.py       # Metrics plot generator (ROC, PR, SHAP)
+│   └── saved_model.pkl   # Serialized ML model bundle
 │
-├── data/
-│   ├── repos/
-│   ├── *_commits.csv
-│   ├── *_labeled.csv
-│   ├── *_features.csv
-│   └── predictions.csv
-│
-├── img/
-│   ├── Preview_1.png
-│   └── Preview_2.png
-│
-├── requirements.txt
-└── README.md
+├── img/                  # UI Preview screenshots
+├── requirements.txt      # Backend Python dependencies
+└── README.md             # Project overview
 ```
 
 ---
 
-# 🚀 Installation
+# 🚀 Quick Start (Local Run)
 
-## Clone Repository
-
+### 1. Run the FastAPI Backend
+Start the backend server on `http://127.0.0.1:8000`:
 ```bash
-git clone https://github.com/yourusername/git-risk-analyzer.git
-
-cd git-risk-analyzer
-```
-
-## Create Virtual Environment
-
-```bash
+# Set up venv and install dependencies
 python -m venv venv
-```
-
-### Windows
-
-```bash
-venv\Scripts\activate
-```
-
-### macOS / Linux
-
-```bash
-source venv/bin/activate
-```
-
-## Install Dependencies
-
-```bash
+source venv/bin/activate  # venv\Scripts\activate on Windows
 pip install -r requirements.txt
+
+# Start FastAPI
+uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
----
-
-# 📦 Requirements
-
-- Python 3.11+
-- Streamlit
-- Plotly
-- Pandas
-- NumPy
-- Scikit-learn
-- XGBoost
-- Optuna
-- GitPython
-- PyDriller
-- Rich
-- SHAP
-
----
-
-# 🧠 Train the Model
-
-Mine repositories
-
+### 2. Run the Next.js Frontend
+Start the frontend development server on `http://localhost:3000`:
 ```bash
-python extractor/run_all.py --workers 3
+# Go to frontend and start dev
+npm run dev --prefix frontend
 ```
-
-Build features
-
-```bash
-python features/build_dataset.py
-```
-
-Train
-
-```bash
-python model/train.py
-```
-
-Example output
-
-```text
-Best model : logistic_regression
-ROC-AUC    : 0.9945
-PR-AUC     : 0.7728
-Brier      : 0.0092
-
-Saved → model/saved_model.pkl
-```
+Open `http://localhost:3000` in your browser.
 
 ---
 
-# 🖥 Launch Dashboard
+# 🧪 CLI Pipeline (Local Dataset Building)
+If you want to re-train the model or compile new datasets locally:
 
-```bash
-streamlit run dashboard/app.py
-```
-
-Open
-
-```
-http://localhost:8501
-```
-
-Paste any public GitHub repository URL to begin analysis.
-
----
-
-# 📈 Model Performance
-
-| Metric | Score |
-|--------|-------:|
-| ROC-AUC | **0.9945** |
-| PR-AUC | **0.7728** |
-| Brier Score | **0.0092** |
-| Weighted F1 | **0.9851** |
-
-### Training Data
-
-- 873K+ commits
-- 61K+ files
-- 15 open-source repositories
-
-Repositories include:
-
-- Django
-- Flask
-- FastAPI
-- Pandas
-- NumPy
-- Scikit-learn
-- Matplotlib
-- Pytest
-- SQLAlchemy
-- Celery
-- Ansible
-- Requests
-- HTTPX
-- Click
-- Rich
-
----
-
-# 🧪 CLI Prediction
-
-Run
-
-```bash
-python model/predict.py
-```
-
-Example
-
-```text
-==================================================
-Git Risk Analyzer — Inference
-==================================================
-
-Total Files      : 61,202
-Predicted Buggy  : 671
-Predicted Clean  : 60,531
-
-HIGH Risk        : 365
-MEDIUM Risk      : 467
-LOW Risk         : 60,370
-
-Average Risk     : 2.00%
-```
-
----
-
-# 🔬 Design Decisions
-
-### Temporal Validation
-
-Training always uses older commits while testing uses newer commits to simulate real-world prediction.
-
----
-
-### SZZ-Inspired Labeling
-
-Bug-fixing commits are traced back to identify the original bug-inducing commit.
-
----
-
-### Probability Calibration
-
-Raw classifier outputs are calibrated using sigmoid scaling, producing meaningful probabilities.
-
----
-
-### Fast Git Mining
-
-Uses
-
-```text
-git log --numstat
-```
-
-instead of expensive per-commit parsing, providing significant speed improvements.
-
----
-
-### Feature Engineering
-
-Features include:
-
-- Commit frequency
-- Code churn
-- Number of contributors
-- File age
-- Recent activity
-- Average LOC
-- Commit density
-- Bug history
-- Author diversity
-- File recency
-- Temporal statistics
-
----
-
-# 🛣 Roadmap
-
-- [ ] SHAP explanations inside dashboard
-- [ ] GitHub Action for pull request comments
-- [ ] Cross-project validation
-- [ ] Deep-learning baseline (TabNet / FT-Transformer)
-- [ ] Repository comparison mode
-- [ ] Historical risk trends
+1. **Mine and label training repositories**:
+   ```bash
+   python extractor/run_all.py --workers 3
+   ```
+2. **Compile features dataset**:
+   ```bash
+   python features/build_dataset.py
+   ```
+3. **Train and Calibrate ML models**:
+   ```bash
+   python model/train.py
+   ```
 
 ---
 
 # 📄 License
 
 This project is licensed under the **MIT License**.
-
----
-
-<div align="center">
-
-**Built with ❤️ using Streamlit, Scikit-learn, XGBoost and Git**
-
-</div>
