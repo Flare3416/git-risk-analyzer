@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 // API Gateway config
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/$/, "");
 
 interface FilePrediction {
   repo: string;
