@@ -57,6 +57,14 @@ def run_predictions_on_df(features_df, bundle):
     df = df.sort_values("risk_score", ascending=False).reset_index(drop=True)
     return df
 
+def sanitize_error_message(e: Exception) -> str:
+    err_str = str(e)
+    if "Failed to clone" in err_str or "git clone" in err_str or "exit code(128)" in err_str or "could not read Username" in err_str:
+        return "Repository not found or is private. Please verify the URL and ensure the repository is public."
+    if "git log" in err_str:
+        return "Failed to analyze repository commit history. The repository might be empty or corrupted."
+    return err_str
+
 def analyze_repository_task(job_id: str, github_url: str):
     repo_name = github_url.rstrip("/").split("/")[-1]
     temp_dir = tempfile.mkdtemp(prefix=f"gitrisk_job_{job_id}_")
@@ -125,7 +133,7 @@ def analyze_repository_task(job_id: str, github_url: str):
         JOBS[job_id].update({
             "status": "failed",
             "progress": 100,
-            "error": str(e),
+            "error": sanitize_error_message(e),
             "traceback": traceback.format_exc()
         })
         
