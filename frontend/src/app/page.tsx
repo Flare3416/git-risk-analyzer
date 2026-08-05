@@ -168,6 +168,13 @@ export default function Home() {
     e.preventDefault();
     if (!url.trim()) return;
 
+    // Frontend validation: Check if it's a valid public GitHub repo URL
+    const githubPattern = /^https:\/\/(www\.)?github\.com\/[a-zA-Z0-9_-]+\/[a-zA-Z0-9_\.-]+\/?$/;
+    if (!githubPattern.test(url.trim())) {
+      setError("Invalid URL. Only valid public GitHub repository URLs are supported (e.g., https://github.com/owner/repo).");
+      return;
+    }
+
     setError(null);
     setView("analyzing");
     setJob(null);
@@ -349,7 +356,7 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-base font-bold text-white tracking-tight flex items-center gap-2">
-                git-risk-analyzer <span className="text-[10px] bg-accent/15 border border-accent/30 text-accent font-semibold px-2 py-0.5 rounded-full">SaaS v2.1</span>
+                git-risk-analyzer
               </h1>
               <p className="text-[10px] text-muted tracking-wider uppercase font-semibold">ML Bug Prediction Engine</p>
             </div>

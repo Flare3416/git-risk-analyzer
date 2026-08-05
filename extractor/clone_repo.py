@@ -17,8 +17,14 @@ def clone_repo(
 
     print(f"Cloning {github_url} ...")
     try:
+        # Disable terminal credentials prompts so cloning fails instantly instead of hanging on private/nonexistent repos
+        import os
+        env = os.environ.copy()
+        env["GIT_TERMINAL_PROMPT"] = "0"
+        env["GIT_ASKPASS"] = "true"
+        
         # Full clone with optimizations (single branch, no tags) to support git log --numstat without remote fetches
-        Repo.clone_from(github_url, clone_dir, single_branch=True, no_tags=True)
+        Repo.clone_from(github_url, clone_dir, env=env, single_branch=True, no_tags=True)
         print(f"Cloned → {clone_dir}")
     except GitCommandError as e:
         raise RuntimeError(f"Failed to clone {github_url}: {e}")
