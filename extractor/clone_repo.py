@@ -23,7 +23,8 @@ def clone_repo(
         env["GIT_ASKPASS"] = "true"
         
         # Full clone with optimizations (single branch, no tags) to support git log --numstat without remote fetches
-        Repo.clone_from(github_url, clone_dir, env=env, single_branch=True, no_tags=True)
+        # kill_after_timeout=180 prevents runaway clones of massive repos on server resources
+        Repo.clone_from(github_url, clone_dir, env=env, single_branch=True, no_tags=True, kill_after_timeout=180)
         print(f"Cloned → {clone_dir}")
     except GitCommandError as e:
         raise RuntimeError(f"Failed to clone {github_url}: {e}")

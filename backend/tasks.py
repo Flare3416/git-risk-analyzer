@@ -59,6 +59,8 @@ def run_predictions_on_df(features_df, bundle):
 
 def sanitize_error_message(e: Exception) -> str:
     err_str = str(e)
+    if "timeout" in err_str.lower() or "killed" in err_str.lower() or "exit code(-9)" in err_str:
+        return "Analysis timed out. The repository is too large to process within our free-tier server limits (3-minute clone limit)."
     if "Failed to clone" in err_str or "git clone" in err_str or "exit code(128)" in err_str or "could not read Username" in err_str:
         return "Repository not found or is private. Please verify the URL and ensure the repository is public."
     if "git log" in err_str:
